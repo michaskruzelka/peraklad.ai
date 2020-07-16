@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+    app:
+        build:
+            context: app
+            args:
+                NODE_VERSION: ${NODE_VERSION}
+        container_name: peraklad_app
+        tty: true
+        stdin_open: true
+        ports:
+            - 3002:3000
+            - 8889:8888
+        volumes:
+            - ./app/www/:/var/www/html/:rw
+        environment:
+            - NEO4J_URI=${NEO4J_URI}
+            - NEO4J_USER=${NEO4J_USER}
+            - NEO4J_PASSWORD=${NEO4J_PASSWORD}
+            - NEO4J_DATABASE=${NEO4J_DATABASE}
+        depends_on:
+            - db
+
+    db:
+        image: ${DB_IMAGE}
+        container_name: peraklad_db
+        tty: true
+        stdin_open: true
+        restart: unless-stopped
+        ports:
+            - 7474:7474
+            - 7687:7687
+        volumes:
+            - ./db/dbms/data:/data
+            - ./db/dbms/logs:/logs
+        environment:
+            - NEO4J_AUTH=${NEO4J_USER}/${NEO4J_PASSWORD}
+            - NEO4JLABS_PLUGINS=["apoc"]
+            - NEO4J_dbms_default__database=${NEO4J_DATABASE}
+            - NEO4J_dbms_memory_pagecache_size=${MEMORY_PAGECACHE_SIZE}
+            - NEO4J_dbms_memory_heap_initial__size=${MEMORY_HEAP_INITIAL_SIZE}
+            - NEO4J_dbms_memory_heap_max__size=${MEMORY_HEAP_MAX_SIZE}

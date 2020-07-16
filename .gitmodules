@@ -1,0 +1,3 @@
+[submodule "app/www"]
+	path = app/www
+	url = https://github.com/michaskruzelka/peraklad.app.git
