@@ -10,9 +10,9 @@ Collaborative Belarusian-language translations service
 ## Local set up
 * git clone --recursive https://github.com/michaskruzelka/peraklad.ai.git
 * cd ./peraklad.ai
-* docker-compose up -d
+* docker-compose up
 
 ## Local addresses
 * Application - http://localhost:3002
-* Neo4j Client - http://localhost:7474/
-* GraphQl Client - http://localhost:8889/graphql
+* Neo4j Browser - http://localhost:7474/
+* GraphQL Playground - http://localhost:8889/graphql
