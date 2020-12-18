@@ -13,6 +13,6 @@ Collaborative Belarusian-language translations service
 * docker-compose up
 
 ## Local addresses
-* Application - http://localhost:3002
+* Application - http://localhost:8889
 * Neo4j Browser - http://localhost:7474/
-* GraphQL Playground - http://localhost:8889/graphql
+* GraphQL Playground - http://localhost:8889/api
