@@ -8,6 +8,10 @@ Collaborative Belarusian-language translations service
 Калектыўны пераклад субтытраў і інтэрфейсаў для гульняў, сайтаў і прылад
 
 ## Local set up
+
+The code of the application is located in a protected repository.
+Please contact me before cloning.
+
 * git clone --recursive https://github.com/michaskruzelka/peraklad.ai.git
 * cd ./peraklad.ai
 * docker-compose up
