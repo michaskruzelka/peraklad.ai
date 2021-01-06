@@ -10,8 +10,8 @@ services:
         tty: true
         stdin_open: true
         ports:
-            - 3002:3000
             - 8889:8888
+            - 4001:4000
         volumes:
             - ./app/www/:/var/www/html/:rw
         environment:
