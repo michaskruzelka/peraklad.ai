@@ -19,6 +19,8 @@ services:
             - NEO4J_USER=${NEO4J_USER}
             - NEO4J_PASSWORD=${NEO4J_PASSWORD}
             - NEO4J_DATABASE=${NEO4J_DATABASE}
+            - NEO4J_ENCRYPTED=${NEO4J_ENCRYPTED}
+            - LOCALE=${LOCALE}
         depends_on:
             - db
 
