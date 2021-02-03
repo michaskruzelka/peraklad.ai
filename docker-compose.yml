@@ -21,6 +21,7 @@ services:
             - NEO4J_DATABASE=${NEO4J_DATABASE}
             - NEO4J_ENCRYPTED=${NEO4J_ENCRYPTED}
             - LOCALE=${LOCALE}
+            - OMDB_API_KEY=${OMDB_API_KEY}
         depends_on:
             - db
 

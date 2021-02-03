@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" modified="2021-02-03T15:44:07.469Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.1.8 Chrome/87.0.4280.88 Electron/11.1.1 Safari/537.36" etag="4n5qv06aL_lJpwpGqFgT" version="14.1.8" type="device">
+  <diagram id="HvzaU_8tQiAKqZK3_KVz" name="Page-1">
+    <mxGraphModel dx="1102" dy="815" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="N_mLY7rLuSSC5JtDoq6Q-1" value="&lt;h1&gt;Лакалізацыя&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=30;" vertex="1" parent="1">
+          <mxGeometry x="219" y="10" width="390" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="N_mLY7rLuSSC5JtDoq6Q-2" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width: 100% ; height: 100% ; border-collapse: collapse&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;&lt;b&gt;Беларуская&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;b&gt;дамен:&lt;br&gt;&lt;/b&gt;peraklad.ai&lt;br&gt;&lt;b&gt;код:&lt;/b&gt; bel, be&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;Вэрсіі:&lt;br&gt;- &lt;b&gt;алфавіт&lt;/b&gt;: лацінка / кірыліца&lt;br&gt;- &lt;b&gt;правапіс&lt;/b&gt;: наркамаўка / тарашкевіца&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;strokeColor=none;fillColor=none;overflow=fill;fontSize=27;" vertex="1" parent="1">
+          <mxGeometry x="30" y="140" width="500" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="N_mLY7rLuSSC5JtDoq6Q-3" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width: 100% ; height: 100% ; border-collapse: collapse&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;&lt;b&gt;Украінская&lt;br&gt;&lt;font color=&quot;#cc0066&quot;&gt;(фаза 3)&lt;/font&gt;&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;&lt;b&gt;дамен:&lt;/b&gt;&lt;br&gt;pereklad.ai&lt;br&gt;&lt;b&gt;код:&lt;/b&gt; ukr, uk&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;Вэрсіі:&lt;br&gt;&lt;font color=&quot;#7ea6e0&quot;&gt;[зрабіць аналіз]&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;strokeColor=none;fillColor=none;overflow=fill;fontSize=27;" vertex="1" parent="1">
+          <mxGeometry x="560" y="140" width="240" height="350" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
