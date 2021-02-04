@@ -1,0 +1,216 @@
+{
+  "style": {
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "outside-position": "auto",
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "type-color": "#848484",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 113.68782641326032,
+        "y": -9
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "ResourceItem"
+      ],
+      "properties": {
+        "id": "ID!",
+        "text": "String!",
+        "status": "Int!"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 451.36541711376145,
+        "y": -268.91362938234846
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "ResourceItem"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": -223.9897642872408,
+        "y": -268.91362938234846
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Resource"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 113.68782641326032,
+        "y": -438.9136293823484
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "ResourceItem"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": -273.07356442330456,
+        "y": 169.8767077016061
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "ResourceItem"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 405.60449602023556,
+        "y": 301.4285876100524
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Recommendation"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": -25.292651760780785,
+        "y": 393.82214026355956
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "ResourceItemContext"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": 539.8113413710715,
+        "y": -9
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Translation"
+      ],
+      "properties": {}
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "type": "NEXT [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n1"
+    },
+    {
+      "id": "n1",
+      "type": "FIRST_ITEM [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n2",
+      "toId": "n0"
+    },
+    {
+      "id": "n2",
+      "type": "LAST_ITEM [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n2",
+      "toId": "n3"
+    },
+    {
+      "id": "n3",
+      "type": "SIMILAR_TO [multiple]",
+      "style": {
+        "detail-position": "above",
+        "property-color": "#68bc00"
+      },
+      "properties": {
+        "match": "Float!"
+      },
+      "fromId": "n0",
+      "toId": "n4"
+    },
+    {
+      "id": "n4",
+      "type": "FOR [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n5",
+      "toId": "n0"
+    },
+    {
+      "id": "n5",
+      "type": "HAS_CONTEXT [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n6"
+    },
+    {
+      "id": "n6",
+      "type": "FOR [multiple]",
+      "style": {},
+      "properties": {},
+      "fromId": "n7",
+      "toId": "n0"
+    }
+  ]
+}

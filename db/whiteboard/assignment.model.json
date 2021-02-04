@@ -1,0 +1,133 @@
+{
+  "style": {
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "outside-position": "auto",
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "type-color": "#848484",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 26,
+        "y": -69
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Assignment"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": -304.5,
+        "y": -306.5
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Project"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 514.5,
+        "y": -69
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "User"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 26,
+        "y": 311.5
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Team"
+      ],
+      "properties": {}
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "type": "FOR [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n1"
+    },
+    {
+      "id": "n1",
+      "type": "SUBMITTED [multiple]",
+      "style": {},
+      "properties": {
+        "at": "DateTime!"
+      },
+      "fromId": "n2",
+      "toId": "n0"
+    },
+    {
+      "id": "n2",
+      "type": "TO  [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n3"
+    },
+    {
+      "id": "n3",
+      "type": "CREATED",
+      "style": {},
+      "properties": {},
+      "fromId": "n2",
+      "toId": "n3"
+    }
+  ]
+}

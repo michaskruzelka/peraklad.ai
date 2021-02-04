@@ -1,0 +1,250 @@
+{
+    "style": {
+      "node-color": "#4C8EDA",
+      "border-width": 0,
+      "border-color": "#000000",
+      "radius": 75,
+      "node-padding": 5,
+      "outside-position": "auto",
+      "caption-position": "inside",
+      "caption-max-width": 200,
+      "caption-color": "#ffffff",
+      "caption-font-size": 20,
+      "caption-font-weight": "normal",
+      "label-position": "inside",
+      "label-color": "#000000",
+      "label-background-color": "#ffffff",
+      "label-border-color": "#848484",
+      "label-border-width": 3,
+      "label-font-size": 20,
+      "label-padding": 5,
+      "label-margin": 4,
+      "directionality": "directed",
+      "detail-position": "above",
+      "detail-orientation": "parallel",
+      "arrow-width": 3,
+      "arrow-color": "#848484",
+      "margin-start": 5,
+      "margin-end": 5,
+      "margin-peer": 20,
+      "attachment-start": "normal",
+      "attachment-end": "normal",
+      "type-color": "#848484",
+      "type-background-color": "#ffffff",
+      "type-border-color": "#848484",
+      "type-border-width": 0,
+      "type-font-size": 21,
+      "type-padding": 5,
+      "property-position": "outside",
+      "property-color": "#848484",
+      "property-font-size": 20,
+      "property-font-weight": "normal"
+    },
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": -367.6034943949983,
+          "y": -477
+        },
+        "caption": "",
+        "style": {
+          "property-font-weight": "normal"
+        },
+        "labels": [
+          "Project"
+        ],
+        "properties": {
+          "id": "ID!",
+          "name": "String!",
+          "type": "Int!",
+          "status": "Int!",
+          "access": "Int!",
+          "abc": "Int!",
+          "spelling": "Int!",
+          "description": "String",
+          "createdAt": "DateTime!",
+          "updatedAt": "DateTime!"
+        }
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": -632.460762744076,
+          "y": -19.81004869891956
+        },
+        "caption": "",
+        "style": {},
+        "labels": [
+          "IMDB"
+        ],
+        "properties": {}
+      },
+      {
+        "id": "n2",
+        "position": {
+          "x": -852.1055457455475,
+          "y": -266.2162567816735
+        },
+        "caption": "",
+        "style": {},
+        "labels": [
+          "Resource"
+        ],
+        "properties": {}
+      },
+      {
+        "id": "n3",
+        "position": {
+          "x": -256.66182919263434,
+          "y": 11.25827543691139
+        },
+        "caption": "",
+        "style": {},
+        "labels": [
+          "User"
+        ],
+        "properties": {}
+      },
+      {
+        "id": "n4",
+        "position": {
+          "x": 99.43897332409063,
+          "y": -229.93046016377613
+        },
+        "caption": "",
+        "style": {},
+        "labels": [
+          "User"
+        ],
+        "properties": {}
+      },
+      {
+        "id": "n5",
+        "position": {
+          "x": 120.26944780551105,
+          "y": -589.6241043432476
+        },
+        "caption": "",
+        "style": {},
+        "labels": [
+          "Assignment"
+        ],
+        "properties": {}
+      },
+      {
+        "id": "n6",
+        "position": {
+          "x": 7.615198591480237,
+          "y": -808.5345065660874
+        },
+        "caption": "",
+        "style": {},
+        "labels": [
+          "Invitation"
+        ],
+        "properties": {}
+      },
+      {
+        "id": "n7",
+        "position": {
+          "x": -879.8675419740755,
+          "y": -808.5345065660874
+        },
+        "caption": "",
+        "style": {},
+        "labels": [
+          "Project",
+          "Subtitles",
+          "Offline"
+        ],
+        "properties": {}
+      },
+      {
+        "id": "n8",
+        "position": {
+          "x": -679.9945997735662,
+          "y": -808.5345065660874
+        },
+        "caption": "",
+        "style": {},
+        "labels": [
+          "Project",
+          "Software"
+        ],
+        "properties": {}
+      },
+      {
+        "id": "n9",
+        "position": {
+          "x": -784.8675419740755,
+          "y": -614.6872899716108
+        },
+        "caption": "",
+        "style": {},
+        "labels": [
+          "Project",
+          "Subtitles",
+          "Youtube"
+        ],
+        "properties": {}
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "HAS_INFO [single]",
+        "style": {
+          "detail-position": "above"
+        },
+        "properties": {},
+        "fromId": "n0",
+        "toId": "n1"
+      },
+      {
+        "id": "n1",
+        "type": "TRANSLATING [multiple]",
+        "style": {},
+        "properties": {},
+        "fromId": "n0",
+        "toId": "n2"
+      },
+      {
+        "id": "n2",
+        "type": "PARTICIPATED_IN [multiple]",
+        "style": {
+          "property-position": "outside",
+          "property-color": "#68bc00"
+        },
+        "properties": {
+          "points": "Int!"
+        },
+        "fromId": "n3",
+        "toId": "n0"
+      },
+      {
+        "id": "n3",
+        "type": "OWNS [single]",
+        "style": {},
+        "properties": {},
+        "fromId": "n4",
+        "toId": "n0"
+      },
+      {
+        "id": "n4",
+        "type": "FOR [multiple]",
+        "style": {},
+        "properties": {},
+        "fromId": "n5",
+        "toId": "n0"
+      },
+      {
+        "id": "n5",
+        "type": "FOR [multiple]",
+        "style": {},
+        "properties": {},
+        "fromId": "n6",
+        "toId": "n0"
+      }
+    ]
+  }

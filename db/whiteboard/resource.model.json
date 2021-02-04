@@ -1,0 +1,231 @@
+{
+  "style": {
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "outside-position": "auto",
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "type-color": "#848484",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 0,
+        "y": -89
+      },
+      "caption": "",
+      "style": {
+        "outside-position": "auto",
+        "label-position": "inside",
+        "property-position": "outside",
+        "property-font-weight": "normal"
+      },
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "id": "ID!",
+        "name": "String!",
+        "language": "String!",
+        "format": "String!",
+        "recommendationLanguages": "String!",
+        "status": "Int!"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 0,
+        "y": -519
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Project"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": -372.32675186959614,
+        "y": -304.11111045744747
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "ResourceItem"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 338.2442505817302,
+        "y": -304.11111045744747
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "ResourceItem"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": -215.62192339070964,
+        "y": -461.03116287925525
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "ResourceContext"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 215.6219233907097,
+        "y": -461.03116287925525
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "User"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": -400.8515472014951,
+        "y": -89
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "User"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": -334.6484987491289,
+        "y": 131.6634205725697
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "User"
+      ],
+      "properties": {}
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "type": "TRANSLATING [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n0"
+    },
+    {
+      "id": "n1",
+      "type": "FIRST_ITEM [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n2"
+    },
+    {
+      "id": "n2",
+      "type": "LAST_ITEM [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n3"
+    },
+    {
+      "id": "n3",
+      "type": "HAS_CONTEXT [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n4"
+    },
+    {
+      "id": "n4",
+      "type": "UPLOADED [single]",
+      "style": {
+        "property-color": "#68bc00"
+      },
+      "properties": {
+        "at": "DateTime!"
+      },
+      "fromId": "n5",
+      "toId": "n0"
+    },
+    {
+      "id": "n5",
+      "type": "FINISHED [single]",
+      "style": {
+        "property-color": "#68bc00"
+      },
+      "properties": {
+        "at": "DateTime!"
+      },
+      "fromId": "n6",
+      "toId": "n0"
+    },
+    {
+      "id": "n6",
+      "type": "DELETED [single]",
+      "style": {
+        "property-color": "#68bc00"
+      },
+      "properties": {
+        "at": "DateTime!"
+      },
+      "fromId": "n7",
+      "toId": "n0"
+    }
+  ]
+}
