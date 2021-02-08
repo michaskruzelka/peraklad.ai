@@ -1,0 +1,160 @@
+{
+  "style": {
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "outside-position": "auto",
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "type-color": "#848484",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "caption": "",
+      "labels": [
+        "Team"
+      ],
+      "properties": {
+        "id": "ID!",
+        "name": "String!",
+        "avatarSrc": "String",
+        "description": "String",
+        "link": "String"
+      },
+      "style": {
+        "radius": 90
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 241.5,
+        "y": -278.5
+      },
+      "caption": "",
+      "labels": [
+        "User"
+      ],
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 368.62514835534483,
+        "y": 0
+      },
+      "caption": "",
+      "labels": [
+        "User"
+      ],
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 181.9493775724482,
+        "y": 320.59152203543795
+      },
+      "caption": "",
+      "labels": [
+        "Assignment"
+      ],
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": -246.75922350012263,
+        "y": 273.8510281478171
+      },
+      "caption": "",
+      "labels": [
+        "Invitation"
+      ],
+      "properties": {},
+      "style": {}
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "fromId": "n1",
+      "toId": "n0",
+      "type": "CREATED [single]",
+      "properties": {
+        "at": "DateTime!"
+      },
+      "style": {
+        "property-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n1",
+      "fromId": "n2",
+      "toId": "n0",
+      "type": "JOINED [multiple]",
+      "properties": {
+        "at": "DateTime!"
+      },
+      "style": {
+        "property-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n2",
+      "fromId": "n3",
+      "toId": "n0",
+      "type": "TO [multiple]",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "fromId": "n4",
+      "toId": "n0",
+      "type": "TO [multiple]",
+      "properties": {},
+      "style": {}
+    }
+  ]
+}
