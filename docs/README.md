@@ -1,20 +1,4 @@
-### Сэрвісы для ui і data modeling
-- https://app.diagrams.net/
-- https://arrows.app/
-- https://www.mockflow.com/app/
-
----
-### OMDB
-
-#### Усі сэрыі канкрэтнага сэзона
-http://www.omdbapi.com/?apikey=[КЛЮЧ]&i=tt2575988&Season=1
-
-#### Шукаць сэрыю па id сэрыяла, нумару сэзона і нумару эпізода
-http://www.omdbapi.com/?apikey=[КЛЮЧ]&i=tt2575988&Season=1&Episode=1
-
----
-
-### Фічы:
+### Асноўная ідэя і асаблівасці:
 Зрабіць прыкладна такі функцыянал, як у сэрвісах transifex.com і crowdin.com, для перакладу субтытраў і інтэрфейсаў для гульняў, сайтаў і прыкладанняў, але бясплатны і арыентаваны толькі на беларускую мову, што спросціць інтэрфейс і дазволіць дадаваць фічы, актуальныя для беларускіх перакладаў:
 - Фаза 1 (канец 2021 - пачатак 2022 гг.):
     - пераклады субтытраў
@@ -37,3 +21,39 @@ http://www.omdbapi.com/?apikey=[КЛЮЧ]&i=tt2575988&Season=1&Episode=1
     - інтэграцыя з перакладнымі агенствамі (пабудова пляцоўкі для продажу іхніх паслугаў)
     - стварэнне ўкраінскай вэрсіі
     - слоўнікі
+
+---
+
+Фарматы:
+
+- **vtt**
+    - https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API
+    - https://w3c.github.io/webvtt/
+    - кантэкст справа: line:63% position:72% align:start (прыклад):
+        - vertical
+        - line
+        - position
+        - size
+        - align
+    - identifier зверху (не падтрымліваць)
+    - кантэкст зверху файла (NOTE, STYLE)
+    - тэгі ў тэксце: дадаюцца ў перакладзе (не выдаляюцца пры фарматаванні субтытраў), або на ўзроўні файла:
+        - \<c.classname>text\</c>
+        - \<i>text\</i>
+        - \<b>text\</b>
+        - \<u>text\</u>
+        - \<ruby>WWW\<rt>World Wide Web\</rt>oui\<rt>yes\</rt>\</ruby>
+        - \<v Bob>text\</v>
+- **srt**
+    - http://ale5000.altervista.org/subtitles.htm
+    - кантэкст справа - coordinates: X1:100 X2:100 Y1:100 Y2:100 (прыклад)
+    - тэгі ў тэксце:
+        - \<b>text\</b>: put text in boldface
+        - \<i>text\</i>: put text in italics
+        - \<u>text\</u>: underline text
+        - \<font color="#00ff00">text\</font>
+- **sbv**
+    - no formatting (as no markup is recognized by youtube)
+- **json, yml, xliff**
+    - id (unique) - ключ або uuid (калі), унікальнае значэнне, абавязковае
+

@@ -48,7 +48,6 @@
         "y": -9
       },
       "caption": "",
-      "style": {},
       "labels": [
         "ResourceItem"
       ],
@@ -56,7 +55,8 @@
         "id": "ID!",
         "text": "String!",
         "status": "Int!"
-      }
+      },
+      "style": {}
     },
     {
       "id": "n1",
@@ -65,11 +65,11 @@
         "y": -268.91362938234846
       },
       "caption": "",
-      "style": {},
       "labels": [
         "ResourceItem"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n2",
@@ -78,11 +78,11 @@
         "y": -268.91362938234846
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Resource"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
@@ -91,11 +91,11 @@
         "y": -438.9136293823484
       },
       "caption": "",
-      "style": {},
       "labels": [
         "ResourceItem"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n4",
@@ -104,24 +104,24 @@
         "y": 169.8767077016061
       },
       "caption": "",
-      "style": {},
       "labels": [
         "ResourceItem"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n5",
       "position": {
-        "x": 405.60449602023556,
-        "y": 301.4285876100524
+        "x": 252.66830458730138,
+        "y": 393.82214026355956
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Recommendation"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n6",
@@ -130,11 +130,11 @@
         "y": 393.82214026355956
       },
       "caption": "",
-      "style": {},
       "labels": [
         "ResourceItemContext"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n7",
@@ -143,9 +143,38 @@
         "y": -9
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Translation"
+      ],
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 467.0803086906792,
+        "y": 229.10712603742905
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Lacinka"
+      ],
+      "properties": {
+        "text": "String!",
+        "auto": "1/0"
+      }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 780.9974154906829,
+        "y": 229.10712603742905
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "User"
       ],
       "properties": {}
     }
@@ -153,64 +182,84 @@
   "relationships": [
     {
       "id": "n0",
-      "type": "NEXT [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n1"
+      "toId": "n1",
+      "type": "NEXT [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n1",
-      "type": "FIRST_ITEM [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n2",
-      "toId": "n0"
+      "toId": "n0",
+      "type": "FIRST_ITEM [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n2",
-      "type": "LAST_ITEM [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n2",
-      "toId": "n3"
+      "toId": "n3",
+      "type": "LAST_ITEM [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
+      "fromId": "n0",
+      "toId": "n4",
       "type": "SIMILAR_TO [multiple]",
-      "style": {
-        "detail-position": "above",
-        "property-color": "#68bc00"
-      },
       "properties": {
         "match": "Float!"
       },
-      "fromId": "n0",
-      "toId": "n4"
+      "style": {
+        "detail-position": "above",
+        "property-color": "#68bc00"
+      }
     },
     {
       "id": "n4",
-      "type": "FOR [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n5",
-      "toId": "n0"
+      "toId": "n0",
+      "type": "FOR [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n5",
-      "type": "HAS_CONTEXT [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n6"
+      "toId": "n6",
+      "type": "HAS_CONTEXT [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n6",
+      "fromId": "n7",
+      "toId": "n0",
       "type": "FOR [multiple]",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n7",
+      "type": "CONVERTED_TO [single]",
       "style": {},
       "properties": {},
-      "fromId": "n7",
-      "toId": "n0"
+      "fromId": "n0",
+      "toId": "n8"
+    },
+    {
+      "id": "n8",
+      "type": "MODIFIED",
+      "style": {
+        "property-color": "#68bc00"
+      },
+      "properties": {
+        "at": "DateTime!"
+      },
+      "fromId": "n9",
+      "toId": "n8"
     }
   ]
 }
