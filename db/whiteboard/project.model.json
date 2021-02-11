@@ -180,9 +180,12 @@
       "labels": [
         "Project",
         "Subtitles",
-        "Youtube"
+        "Online"
       ],
-      "properties": {},
+      "properties": {
+        "service": "Int!",
+        "videoUrl": "String!"
+      },
       "style": {}
     },
     {
@@ -192,11 +195,11 @@
         "y": -398.07181012971625
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Project"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n11",
@@ -205,10 +208,6 @@
         "y": -954.8720562776609
       },
       "caption": "",
-      "style": {
-        "property-position": "inside",
-        "property-color": "#ffffff"
-      },
       "labels": [
         "ProjectSettings"
       ],
@@ -217,6 +216,10 @@
         "access": "Int!",
         "abc": "Int!",
         "spelling": "Int!"
+      },
+      "style": {
+        "property-position": "inside",
+        "property-color": "#ffffff"
       }
     }
   ],
@@ -278,19 +281,19 @@
     },
     {
       "id": "n6",
-      "type": "IS_PARENT_OF [multiple]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n10"
+      "toId": "n10",
+      "type": "IS_PARENT_OF [multiple]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n7",
-      "type": "HAS_SETTINGS [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n11"
+      "toId": "n11",
+      "type": "HAS_SETTINGS [single]",
+      "properties": {},
+      "style": {}
     }
   ]
 }

@@ -48,7 +48,6 @@
         "y": -206.5
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Invitation"
       ],
@@ -56,7 +55,8 @@
         "status": "Int!",
         "updatedAt": "DateTime!",
         "createdAt": "DateTime!"
-      }
+      },
+      "style": {}
     },
     {
       "id": "n1",
@@ -65,11 +65,11 @@
         "y": -442.9952006551158
       },
       "caption": "",
-      "style": {},
       "labels": [
         "User"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n2",
@@ -78,11 +78,11 @@
         "y": -206.5
       },
       "caption": "",
-      "style": {},
       "labels": [
         "User"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
@@ -91,17 +91,85 @@
         "y": 29.995200655115752
       },
       "caption": "",
-      "style": {},
       "labels": [
         "User"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n4",
       "position": {
         "x": -506.8068718582199,
         "y": 113.76650429449546
+      },
+      "caption": "",
+      "labels": [
+        "Team"
+      ],
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": -770.3348056942732,
+        "y": -287.5
+      },
+      "caption": "",
+      "labels": [
+        "Invitation"
+      ],
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 22.72106197783347,
+        "y": -634.4839991199465
+      },
+      "caption": "",
+      "labels": [
+        "User"
+      ],
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": -736.3478931290144,
+        "y": -442.9952006551158
+      },
+      "caption": "",
+      "labels": [
+        "Project"
+      ],
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": -164.16403146777105,
+        "y": 231.60456730704368
+      },
+      "caption": "",
+      "labels": [
+        "User [the one who can respond on behalf of a team]]"
+      ],
+      "properties": {},
+      "style": {
+        "label-position": "outside",
+        "label-font-size": 15
+      }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": -273,
+        "y": -726.7126968846493
       },
       "caption": "",
       "style": {},
@@ -111,23 +179,10 @@
       "properties": {}
     },
     {
-      "id": "n5",
+      "id": "n10",
       "position": {
-        "x": -770.3348056942732,
-        "y": -287.5
-      },
-      "caption": "",
-      "style": {},
-      "labels": [
-        "Invitation"
-      ],
-      "properties": {}
-    },
-    {
-      "id": "n6",
-      "position": {
-        "x": 22.72106197783347,
-        "y": -634.4839991199465
+        "x": -556.8472579537108,
+        "y": -642.4495201880139
       },
       "caption": "",
       "style": {},
@@ -135,124 +190,127 @@
         "User"
       ],
       "properties": {}
-    },
-    {
-      "id": "n7",
-      "position": {
-        "x": -616.6144523060075,
-        "y": -597.0769554984556
-      },
-      "caption": "",
-      "style": {},
-      "labels": [
-        "Project"
-      ],
-      "properties": {}
-    },
-    {
-      "id": "n8",
-      "position": {
-        "x": -164.16403146777105,
-        "y": 231.60456730704368
-      },
-      "caption": "",
-      "style": {
-        "label-position": "outside",
-        "label-font-size": 15
-      },
-      "labels": [
-        "User [the one who can respond on behalf of a team]]"
-      ],
-      "properties": {}
     }
   ],
   "relationships": [
     {
       "id": "n0",
+      "fromId": "n1",
+      "toId": "n0",
       "type": "SENT [multiple]",
-      "style": {},
       "properties": {
         "at": "DateTime!"
       },
-      "fromId": "n1",
-      "toId": "n0"
+      "style": {}
     },
     {
       "id": "n1",
+      "fromId": "n2",
+      "toId": "n0",
       "type": "REQUESTED [multiple]",
-      "style": {},
       "properties": {
         "at": "DateTime!"
       },
-      "fromId": "n2",
-      "toId": "n0"
+      "style": {}
     },
     {
       "id": "n2",
-      "type": "TO [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n3"
+      "toId": "n3",
+      "type": "TO [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
-      "type": "TO [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n5",
-      "toId": "n4"
+      "toId": "n4",
+      "type": "TO [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n4",
+      "fromId": "n6",
+      "toId": "n0",
       "type": "CANCELED",
-      "style": {},
       "properties": {
         "at": "DateTime!"
       },
-      "fromId": "n6",
-      "toId": "n0"
+      "style": {}
     },
     {
       "id": "n5",
+      "fromId": "n0",
+      "toId": "n7",
+      "type": "FOR [single]",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n6",
+      "fromId": "n8",
+      "toId": "n4",
+      "type": "CREATED",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n7",
+      "fromId": "n3",
+      "toId": "n0",
+      "type": "ACCEPTED [multiple]",
+      "properties": {
+        "at": "DateTime!"
+      },
+      "style": {
+        "property-position": "outside",
+        "detail-position": "below"
+      }
+    },
+    {
+      "id": "n8",
+      "fromId": "n4",
+      "toId": "n5",
+      "type": "DECLINED [multiple]",
+      "properties": {
+        "at": "DateTime!"
+      },
+      "style": {
+        "detail-position": "below"
+      }
+    },
+    {
+      "id": "n9",
       "type": "FOR [single]",
       "style": {},
       "properties": {},
       "fromId": "n0",
-      "toId": "n7"
+      "toId": "n9"
     },
     {
-      "id": "n6",
+      "id": "n10",
+      "type": "TO [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n10"
+    },
+    {
+      "id": "n11",
       "type": "CREATED",
       "style": {},
       "properties": {},
-      "fromId": "n8",
-      "toId": "n4"
+      "fromId": "n10",
+      "toId": "n9"
     },
     {
-      "id": "n7",
-      "type": "ACCEPTED [multiple]",
-      "style": {
-        "property-position": "outside",
-        "detail-position": "below"
-      },
-      "properties": {
-        "at": "DateTime!"
-      },
-      "fromId": "n3",
-      "toId": "n0"
-    },
-    {
-      "id": "n8",
-      "type": "DECLINED [multiple]",
-      "style": {
-        "detail-position": "below"
-      },
-      "properties": {
-        "at": "DateTime!"
-      },
-      "fromId": "n4",
-      "toId": "n5"
+      "id": "n12",
+      "type": "OWNS",
+      "style": {},
+      "properties": {},
+      "fromId": "n10",
+      "toId": "n7"
     }
   ]
 }
