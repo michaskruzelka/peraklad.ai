@@ -156,27 +156,18 @@
         "y": 229.10712603742905
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Lacinka"
       ],
       "properties": {
-        "text": "String!",
-        "auto": "1/0"
-      }
-    },
-    {
-      "id": "n9",
-      "position": {
-        "x": 780.9974154906829,
-        "y": 229.10712603742905
+        "text": "String!"
       },
-      "caption": "",
-      "style": {},
-      "labels": [
-        "User"
-      ],
-      "properties": {}
+      "style": {
+        "property-position": "inside",
+        "property-color": "#ffffff",
+        "property-font-weight": "normal",
+        "property-font-size": 14
+      }
     }
   ],
   "relationships": [
@@ -243,23 +234,11 @@
     },
     {
       "id": "n7",
-      "type": "CONVERTED_TO [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n8"
-    },
-    {
-      "id": "n8",
-      "type": "MODIFIED",
-      "style": {
-        "property-color": "#68bc00"
-      },
-      "properties": {
-        "at": "DateTime!"
-      },
-      "fromId": "n9",
-      "toId": "n8"
+      "toId": "n8",
+      "type": "CONVERTED_TO [single]",
+      "properties": {},
+      "style": {}
     }
   ]
 }
