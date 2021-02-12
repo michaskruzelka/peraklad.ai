@@ -44,7 +44,7 @@
     {
       "id": "n0",
       "position": {
-        "x": 0,
+        "x": -47,
         "y": 0
       },
       "caption": "",
@@ -63,7 +63,95 @@
         "seenNotificationsAt": "DateTime"
       },
       "style": {}
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 382.5,
+        "y": 0
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "UserSettings"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 382.5,
+        "y": -429.5
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Service",
+        "Youtube"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 687.7303306218407,
+        "y": -302.16666803021445
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Service",
+        "Yandex"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 812,
+        "y": 0
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Service",
+        "Google"
+      ],
+      "properties": {}
     }
   ],
-  "relationships": []
+  "relationships": [
+    {
+      "id": "n0",
+      "type": "HAS_SETTINGS [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n1"
+    },
+    {
+      "id": "n1",
+      "type": "SPECIFIC_FOR",
+      "style": {},
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n2"
+    },
+    {
+      "id": "n2",
+      "type": "SPECIFIC_FOR",
+      "style": {},
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n3"
+    },
+    {
+      "id": "n3",
+      "type": "SPECIFIC_FOR ",
+      "style": {},
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n4"
+    }
+  ]
 }

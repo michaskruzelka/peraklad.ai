@@ -64,23 +64,10 @@
       }
     },
     {
-      "id": "n1",
-      "position": {
-        "x": -622.8663089562832,
-        "y": -46.250546009920924
-      },
-      "caption": "",
-      "labels": [
-        "IMDB"
-      ],
-      "properties": {},
-      "style": {}
-    },
-    {
       "id": "n2",
       "position": {
-        "x": -819.0220511413163,
-        "y": -260.3770943884939
+        "x": -472.8675419740755,
+        "y": 17.206890844208317
       },
       "caption": "",
       "labels": [
@@ -92,8 +79,8 @@
     {
       "id": "n3",
       "position": {
-        "x": -287.20607122359917,
-        "y": 17.206890844208317
+        "x": -218.12943497511014,
+        "y": 0.8720562776609881
       },
       "caption": "",
       "labels": [
@@ -144,8 +131,8 @@
     {
       "id": "n7",
       "position": {
-        "x": -472.8675419740755,
-        "y": -954.8720562776609
+        "x": -823.0220511413163,
+        "y": -811.8720562776609
       },
       "caption": "",
       "labels": [
@@ -159,8 +146,8 @@
     {
       "id": "n8",
       "position": {
-        "x": -708.9945997735662,
-        "y": -841.5345065660874
+        "x": -823.0220511413163,
+        "y": -650.4118545416429
       },
       "caption": "",
       "labels": [
@@ -173,8 +160,8 @@
     {
       "id": "n9",
       "position": {
-        "x": -842.0220511413163,
-        "y": -602.6872899716108
+        "x": -823.0220511413163,
+        "y": -477
       },
       "caption": "",
       "labels": [
@@ -182,10 +169,7 @@
         "Subtitles",
         "Online"
       ],
-      "properties": {
-        "service": "Int!",
-        "videoUrl": "String!"
-      },
+      "properties": {},
       "style": {}
     },
     {
@@ -221,19 +205,43 @@
         "property-position": "inside",
         "property-color": "#ffffff"
       }
+    },
+    {
+      "id": "n12",
+      "position": {
+        "x": -823.0220511413163,
+        "y": -84.07181012971625
+      },
+      "caption": "",
+      "style": {
+        "property-position": "inside",
+        "property-font-size": 16,
+        "property-color": "#ffffff"
+      },
+      "labels": [
+        "VideoInfo"
+      ],
+      "properties": {
+        "service": "Int!",
+        "videoUrl": "String!",
+        "language": "String"
+      }
+    },
+    {
+      "id": "n13",
+      "position": {
+        "x": -435.59094047259487,
+        "y": -811.8720562776609
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "IMDB"
+      ],
+      "properties": {}
     }
   ],
   "relationships": [
-    {
-      "id": "n0",
-      "fromId": "n0",
-      "toId": "n1",
-      "type": "HAS_INFO [single]",
-      "properties": {},
-      "style": {
-        "detail-position": "above"
-      }
-    },
     {
       "id": "n1",
       "fromId": "n0",
@@ -294,6 +302,22 @@
       "type": "HAS_SETTINGS [single]",
       "properties": {},
       "style": {}
+    },
+    {
+      "id": "n8",
+      "type": "HAS_INFO [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n9",
+      "toId": "n12"
+    },
+    {
+      "id": "n9",
+      "type": "HAS_INFO  [single]",
+      "style": {},
+      "properties": {},
+      "fromId": "n7",
+      "toId": "n13"
     }
   ]
 }
