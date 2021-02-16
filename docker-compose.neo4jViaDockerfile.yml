@@ -29,7 +29,8 @@ services:
             - db
 
     db:
-        image: ${DB_IMAGE}
+        build:
+            context: db
         container_name: peraklad_db
         tty: true
         stdin_open: true
@@ -42,7 +43,7 @@ services:
             - ./db/dbms/logs:/logs
         environment:
             - NEO4J_AUTH=${NEO4J_USER}/${NEO4J_PASSWORD}
-            - NEO4JLABS_PLUGINS=["apoc"]
+            - NEO4J_dbms_security_procedures_unrestricted=apoc.*
             - NEO4J_dbms_default__database=${NEO4J_DATABASE}
             - NEO4J_dbms_memory_pagecache_size=${MEMORY_PAGECACHE_SIZE}
             - NEO4J_dbms_memory_heap_initial__size=${MEMORY_HEAP_INITIAL_SIZE}
