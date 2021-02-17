@@ -25,6 +25,9 @@ services:
             - OMDB_API_KEY=${OMDB_API_KEY}
             - NODE_ENV=${NODE_ENV}
             - LOGZ_TOKEN=${LOGZ_TOKEN}
+            - OPENSUBTITLES_UA=${OPENSUBTITLES_UA}
+            - OPENSUBTITLES_USERNAME=${OPENSUBTITLES_USERNAME}
+            - OPENSUBTITLES_PASSWORD=${OPENSUBTITLES_PASSWORD}
         depends_on:
             - db
 
