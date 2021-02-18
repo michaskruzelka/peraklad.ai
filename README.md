@@ -6,7 +6,7 @@
 
 Collaborative Belarusian-language translations service
 
-Калектыўны пераклад субтытраў і інтэрфейсаў для гульняў, сайтаў і прылад
+Калектыўны пераклад субтытраў і інтэрфейсаў для гульняў, сайтаў, дадаткаў, ПЗ.
 
 ## Local set up
 -   clone recursively <br/>
