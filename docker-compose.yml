@@ -43,6 +43,7 @@ services:
         volumes:
             - ./db/dbms/data:/data
             - ./db/dbms/logs:/logs
+            - ./db/operations/apoc.conf:/conf/apoc.conf
         environment:
             - NEO4J_AUTH=${NEO4J_USER}/${NEO4J_PASSWORD}
             - NEO4JLABS_PLUGINS=["apoc"]
