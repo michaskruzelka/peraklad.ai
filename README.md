@@ -9,10 +9,6 @@ Collaborative Belarusian-language translations service
 Калектыўны пераклад субтытраў і інтэрфейсаў для гульняў, сайтаў і прылад
 
 ## Local set up
-
-The code of the application is located in a protected repository.
-Please contact me before cloning.
-
 -   clone recursively <br/>
     (Some of submodules are private. Please contact the repository owner before cloning).
 -   create an .env file and fill it with variables from .env.sample.
