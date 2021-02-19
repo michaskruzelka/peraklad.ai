@@ -1,0 +1,16 @@
+CREATE CONSTRAINT project_id_exists ON (p:Project) ASSERT exists(p.id);
+CREATE CONSTRAINT project_name_exists ON (p:Project) ASSERT exists(p.name);
+CREATE CONSTRAINT project_type_exists ON (p:Project) ASSERT exists(p.type);
+CREATE CONSTRAINT project_created_at_exists ON (p:Project) ASSERT exists(p.createdAt);
+CREATE CONSTRAINT project_updated_at_exists ON (p:Project) ASSERT exists(p.updatedAt);
+CREATE CONSTRAINT project_settings_status_exists ON (ps:ProjectSettings) ASSERT exists(ps.status);
+CREATE CONSTRAINT project_settings_access_exists ON (ps:ProjectSettings) ASSERT exists(ps.access);
+CREATE CONSTRAINT project_settings_abc_exists ON (ps:ProjectSettings) ASSERT exists(ps.abc);
+CREATE CONSTRAINT project_settings_spelling_exists ON (ps:ProjectSettings) ASSERT exists(ps.spelling);
+CREATE CONSTRAINT video_info_service_exists ON (vi:VideoInfo) ASSERT exists(vi.service);
+CREATE CONSTRAINT video_info_url_exists ON (vi:VideoInfo) ASSERT exists(vi.url);
+CREATE CONSTRAINT imdb_title ON (i:IMDB) ASSERT exists(i.title);
+CREATE CONSTRAINT movie_language ON (m:Movie) ASSERT exists(m.language);
+CREATE CONSTRAINT series_language ON (s:Series) ASSERT exists(s.language);
+CREATE CONSTRAINT episode_number ON (e:Episode) ASSERT exists(e.episodeNum);
+CREATE CONSTRAINT episode_season ON (e:Episode) ASSERT exists(e.seasonNum);

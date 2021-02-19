@@ -44,6 +44,8 @@ services:
             - ./db/dbms/data:/data
             - ./db/dbms/logs:/logs
             - ./db/operations/apoc.conf:/conf/apoc.conf
+            - ./db/operations/setupSchema.cypher:/import/setupSchema.cypher
+            - ./db/operations/setupProcedures.cypher:/import/setupProcedures.cypher
         environment:
             - NEO4J_AUTH=${NEO4J_USER}/${NEO4J_PASSWORD}
             - NEO4JLABS_PLUGINS=["apoc"]
