@@ -48,12 +48,6 @@
         "y": -89
       },
       "caption": "",
-      "style": {
-        "outside-position": "auto",
-        "label-position": "inside",
-        "property-position": "outside",
-        "property-font-weight": "normal"
-      },
       "labels": [
         "Resource"
       ],
@@ -62,8 +56,13 @@
         "name": "String!",
         "language": "String!",
         "format": "String!",
-        "recommendationLanguages": "String!",
         "status": "Int!"
+      },
+      "style": {
+        "outside-position": "auto",
+        "label-position": "inside",
+        "property-position": "outside",
+        "property-font-weight": "normal"
       }
     },
     {
@@ -73,11 +72,11 @@
         "y": -519
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Project"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n2",
@@ -86,11 +85,11 @@
         "y": -304.11111045744747
       },
       "caption": "",
-      "style": {},
       "labels": [
         "ResourceItem"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
@@ -99,11 +98,11 @@
         "y": -304.11111045744747
       },
       "caption": "",
-      "style": {},
       "labels": [
         "ResourceItem"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n4",
@@ -112,11 +111,11 @@
         "y": -461.03116287925525
       },
       "caption": "",
-      "style": {},
       "labels": [
         "ResourceContext"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n5",
@@ -125,11 +124,11 @@
         "y": -461.03116287925525
       },
       "caption": "",
-      "style": {},
       "labels": [
         "User"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n6",
@@ -138,11 +137,11 @@
         "y": -89
       },
       "caption": "",
-      "style": {},
       "labels": [
         "User"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n7",
@@ -151,81 +150,81 @@
         "y": 131.6634205725697
       },
       "caption": "",
-      "style": {},
       "labels": [
         "User"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     }
   ],
   "relationships": [
     {
       "id": "n0",
-      "type": "TRANSLATING [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n1",
-      "toId": "n0"
+      "toId": "n0",
+      "type": "TRANSLATING [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n1",
-      "type": "FIRST_ITEM [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n2"
+      "toId": "n2",
+      "type": "FIRST_ITEM [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n2",
-      "type": "LAST_ITEM [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n3"
+      "toId": "n3",
+      "type": "LAST_ITEM [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
-      "type": "HAS_CONTEXT [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n4"
+      "toId": "n4",
+      "type": "HAS_CONTEXT [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n4",
+      "fromId": "n5",
+      "toId": "n0",
       "type": "UPLOADED [single]",
-      "style": {
-        "property-color": "#68bc00"
-      },
       "properties": {
         "at": "DateTime!"
       },
-      "fromId": "n5",
-      "toId": "n0"
+      "style": {
+        "property-color": "#68bc00"
+      }
     },
     {
       "id": "n5",
+      "fromId": "n6",
+      "toId": "n0",
       "type": "FINISHED [single]",
-      "style": {
-        "property-color": "#68bc00"
-      },
       "properties": {
         "at": "DateTime!"
       },
-      "fromId": "n6",
-      "toId": "n0"
+      "style": {
+        "property-color": "#68bc00"
+      }
     },
     {
       "id": "n6",
+      "fromId": "n7",
+      "toId": "n0",
       "type": "DELETED [single]",
-      "style": {
-        "property-color": "#68bc00"
-      },
       "properties": {
         "at": "DateTime!"
       },
-      "fromId": "n7",
-      "toId": "n0"
+      "style": {
+        "property-color": "#68bc00"
+      }
     }
   ]
 }

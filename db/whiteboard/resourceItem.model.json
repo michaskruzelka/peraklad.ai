@@ -148,26 +148,6 @@
       ],
       "properties": {},
       "style": {}
-    },
-    {
-      "id": "n8",
-      "position": {
-        "x": 467.0803086906792,
-        "y": 229.10712603742905
-      },
-      "caption": "",
-      "labels": [
-        "Lacinka"
-      ],
-      "properties": {
-        "text": "String!"
-      },
-      "style": {
-        "property-position": "inside",
-        "property-color": "#ffffff",
-        "property-font-weight": "normal",
-        "property-font-size": 14
-      }
     }
   ],
   "relationships": [
@@ -229,14 +209,6 @@
       "fromId": "n7",
       "toId": "n0",
       "type": "FOR [multiple]",
-      "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n7",
-      "fromId": "n0",
-      "toId": "n8",
-      "type": "CONVERTED_TO [single]",
       "properties": {},
       "style": {}
     }

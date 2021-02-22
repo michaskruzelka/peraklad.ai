@@ -94,14 +94,14 @@
         "y": -458.9925566725285
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Format",
         "SRT"
       ],
       "properties": {
         "coordinates": "String"
-      }
+      },
+      "style": {}
     },
     {
       "id": "n4",
@@ -110,14 +110,14 @@
         "y": -360.9925566725285
       },
       "caption": "",
-      "style": {},
       "labels": [
         "ResourceItemContext",
-        "Interface"
+        "Software"
       ],
       "properties": {
         "key": "String"
-      }
+      },
+      "style": {}
     },
     {
       "id": "n5",
@@ -126,22 +126,22 @@
         "y": -360.9925566725285
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Format",
         "XLIFF"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     }
   ],
   "relationships": [
     {
       "id": "n0",
-      "type": "SPECIFIC_FOR",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n1"
+      "toId": "n1",
+      "type": "SPECIFIC_FOR",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n1",
@@ -153,19 +153,19 @@
     },
     {
       "id": "n2",
-      "type": "SPECIFIC_FOR [multiple]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n3"
+      "toId": "n3",
+      "type": "SPECIFIC_FOR [multiple]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
-      "type": "SPECIFIC_FOR [multiple]",
-      "style": {},
-      "properties": {},
       "fromId": "n4",
-      "toId": "n5"
+      "toId": "n5",
+      "type": "SPECIFIC_FOR [multiple]",
+      "properties": {},
+      "style": {}
     }
   ]
 }

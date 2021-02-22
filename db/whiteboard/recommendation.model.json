@@ -48,17 +48,15 @@
         "y": -271
       },
       "caption": "",
-      "style": {},
       "labels": [
-        "Recommendation",
-        "Subtitle"
+        "Recommendation"
       ],
       "properties": {
         "language": "String!",
         "text": "String!",
-        "startsAt": "Duration",
-        "endsAt": "Duration"
-      }
+        "createdAt": "DateTime!"
+      },
+      "style": {}
     },
     {
       "id": "n1",
@@ -67,21 +65,48 @@
         "y": -271
       },
       "caption": "",
-      "style": {},
       "labels": [
         "ResourceItem"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": -94,
+        "y": 57.5
+      },
+      "caption": "",
+      "style": {
+        "property-position": "inside",
+        "property-color": "#ffffff"
+      },
+      "labels": [
+        "Timing"
+      ],
+      "properties": {
+        "startsAt": "Duration!",
+        "endsAt": "Duration!"
+      }
     }
   ],
   "relationships": [
     {
       "id": "n0",
+      "fromId": "n0",
+      "toId": "n1",
       "type": "FOR [single]",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "type": "HAS_TIMING",
       "style": {},
       "properties": {},
       "fromId": "n0",
-      "toId": "n1"
+      "toId": "n2"
     }
   ]
 }

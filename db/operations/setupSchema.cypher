@@ -1,7 +1,10 @@
 CALL apoc.schema.assert(
     null,
     {
-        Project: ['id']
+        Project: ['id'],
+        Resource: ['id'],
+        ResourceItem: ['id'],
+        Translation: ['id']
     },
     false
 );
