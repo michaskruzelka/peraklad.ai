@@ -3,7 +3,7 @@
 - Indexes, unique property constraints and UUID procedures are created via apoc.conf (see setupSchema and setupProcedures).
 - Property existence constraints are created manually (EE only):
 ```bash
-cat db/operations/clear.cypher | docker-compose exec -T db cypher-shell
+cat db/operations/enterprise.cypher | docker-compose exec -T db cypher-shell
 ```
 - To clear all the data:
 ```bash
