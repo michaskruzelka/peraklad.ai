@@ -1,12 +1,12 @@
 CREATE CONSTRAINT project_id_exists IF NOT EXISTS ON (p:Project) ASSERT exists(p.id);
 CREATE CONSTRAINT project_name_exists IF NOT EXISTS ON (p:Project) ASSERT exists(p.name);
-CREATE CONSTRAINT project_level_id_exists IF NOT EXISTS ON (p:Project) ASSERT exists(p.levelId);
+CREATE CONSTRAINT project_level_exists IF NOT EXISTS ON (p:Project) ASSERT exists(p.level);
 CREATE CONSTRAINT project_created_at_exists IF NOT EXISTS ON (p:Project) ASSERT exists(p.createdAt);
 CREATE CONSTRAINT project_updated_at_exists IF NOT EXISTS ON (p:Project) ASSERT exists(p.updatedAt);
-CREATE CONSTRAINT project_settings_status_id_exists IF NOT EXISTS ON (ps:ProjectSettings) ASSERT exists(ps.statusId);
-CREATE CONSTRAINT project_settings_access_id_exists IF NOT EXISTS ON (ps:ProjectSettings) ASSERT exists(ps.accessId);
-CREATE CONSTRAINT project_settings_abc_id_exists IF NOT EXISTS ON (ps:ProjectSettings) ASSERT exists(ps.abcId);
-CREATE CONSTRAINT project_settings_spelling_id_exists IF NOT EXISTS ON (ps:ProjectSettings) ASSERT exists(ps.spellingId);
+CREATE CONSTRAINT project_settings_status_exists IF NOT EXISTS ON (ps:ProjectSettings) ASSERT exists(ps.status);
+CREATE CONSTRAINT project_settings_access_exists IF NOT EXISTS ON (ps:ProjectSettings) ASSERT exists(ps.access);
+CREATE CONSTRAINT project_settings_abc_exists IF NOT EXISTS ON (ps:ProjectSettings) ASSERT exists(ps.abc);
+CREATE CONSTRAINT project_settings_spelling_exists IF NOT EXISTS ON (ps:ProjectSettings) ASSERT exists(ps.spelling);
 CREATE CONSTRAINT video_info_service_exists IF NOT EXISTS ON (vi:VideoInfo) ASSERT exists(vi.service);
 CREATE CONSTRAINT video_info_url_exists IF NOT EXISTS ON (vi:VideoInfo) ASSERT exists(vi.url);
 CREATE CONSTRAINT imdb_title_exists IF NOT EXISTS ON (i:IMDB) ASSERT exists(i.title);

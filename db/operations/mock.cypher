@@ -3,7 +3,7 @@ SET p.level = 3,
     p.description = 'Нейкае апісаньне праекта. Пра фільм, пра пераклад, пра каманду і г.д.',
     p.createdAt = datetime(),
     p.updatedAt = datetime()
-CREATE (ps:ProjectSettings { statusId: 1, accessId: 2, abcId: 1, spellingId: 2 })
+CREATE (ps:ProjectSettings { status: 1, access: 2, abc: 1, spelling: 2 })
 CREATE (p)-[:HAS_SETTINGS]->(ps)
 CREATE (im:IMDB:Movie)
 SET im.title = 'Ray',
@@ -95,7 +95,7 @@ SET e1.level = 2,
     e1.description = 'Апісанне серыі.',
     e1.createdAt = datetime(),
     e1.updatedAt = datetime()
-CREATE (ps1:ProjectSettings { statusId: 2, accessId: 3, abcId: 1, spellingId: 1 })
+CREATE (ps1:ProjectSettings { status: 2, access: 3, abc: 1, spelling: 1 })
 CREATE (e1)-[:HAS_SETTINGS]->(ps1)
 CREATE (s)-[:IS_PARENT_OF]->(e1)
 CREATE (ie1:IMDB:Episode)
@@ -111,7 +111,7 @@ CREATE (e2:Project:MovieSubtitles { name: 'Назва іншай серыі' })
 SET e2.level = 2,
     e2.createdAt = datetime(),
     e2.updatedAt = datetime()
-CREATE (ps2:ProjectSettings {statusId: 2, accessId: 3, abcId: 1, spellingId: 1})
+CREATE (ps2:ProjectSettings {status: 2, access: 3, abc: 1, spelling: 1})
 CREATE (e2)-[:HAS_SETTINGS]->(ps2)
 CREATE (s)-[:IS_PARENT_OF]->(e2)
 CREATE (ie2:IMDB:Episode)
@@ -125,7 +125,7 @@ CREATE (p:Project:VideoStreamSubtitles { name: 'Зорныя войны' })
     SET p.level = 3,
     p.createdAt = datetime(),
     p.updatedAt = datetime()
-CREATE (ps:ProjectSettings { statusId: 1, accessId: 2, abcId: 1, spellingId: 1 })
+CREATE (ps:ProjectSettings { status: 1, access: 2, abc: 1, spelling: 1 })
 CREATE (p)-[:HAS_SETTINGS]->(ps)
 CREATE (vi:VideoInfo)
 SET vi.service = 1,
