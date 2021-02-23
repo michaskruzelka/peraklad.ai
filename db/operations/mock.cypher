@@ -1,9 +1,9 @@
-CREATE (p:Project:Subtitles:Offline { name: 'Рэй' })
-SET p.type = 3,
+CREATE (p:Project:MovieSubtitles { name: 'Рэй' })
+SET p.level = 3,
     p.description = 'Нейкае апісаньне праекта. Пра фільм, пра пераклад, пра каманду і г.д.',
     p.createdAt = datetime(),
     p.updatedAt = datetime()
-CREATE (ps:ProjectSettings { status: 1, access: 2, abc: 1, spelling: 2 })
+CREATE (ps:ProjectSettings { statusId: 1, accessId: 2, abcId: 1, spellingId: 2 })
 CREATE (p)-[:HAS_SETTINGS]->(ps)
 CREATE (im:IMDB:Movie)
 SET im.title = 'Ray',
@@ -78,8 +78,8 @@ CREATE (r)-[:FIRST_ITEM]->(ri1)
 CREATE (r)-[:LAST_ITEM]->(ri3)
 ;
 
-CREATE (s:Project:Subtitles:Offline { name: 'Крамянёвая даліна' })
-SET s.type = 1,
+CREATE (s:Project:MovieSubtitles { name: 'Крамянёвая даліна' })
+SET s.level = 1,
     s.description = 'Нейкае апісанне праекта. Пра серыял, пра пераклад, пра каманду і г.д.',
     s.createdAt = datetime(),
     s.updatedAt = datetime()
@@ -90,12 +90,12 @@ SET is0.title = 'Silicon Valley',
     is0.imdbId = 'tt2575988',
     is0.posterSrc = 'https://m.media-amazon.com/images/M/MV5BOTcwNzU2MGEtMzUzNC00MzMwLWJhZGItNDY3NDllYjU5YzAyXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg'
 CREATE (s)-[:HAS_INFO]->(is0)
-CREATE (e1:Project:Subtitles:Offline { name: 'Імклівае абясцэньванне' })
-SET e1.type = 2,
+CREATE (e1:Project:MovieSubtitles { name: 'Імклівае абясцэньванне' })
+SET e1.level = 2,
     e1.description = 'Апісанне серыі.',
     e1.createdAt = datetime(),
     e1.updatedAt = datetime()
-CREATE (ps1:ProjectSettings { status: 2, access: 3, abc: 1, spelling: 1 })
+CREATE (ps1:ProjectSettings { statusId: 2, accessId: 3, abcId: 1, spellingId: 1 })
 CREATE (e1)-[:HAS_SETTINGS]->(ps1)
 CREATE (s)-[:IS_PARENT_OF]->(e1)
 CREATE (ie1:IMDB:Episode)
@@ -107,11 +107,11 @@ SET ie1.title = 'Minimum Viable Product',
     ie1.imdbRating = 7.8,
     ie1.posterSrc = 'https://m.media-amazon.com/images/M/MV5BYWIyODUxOTItOTYwNS00Mjc4LWI4ZjUtNWQ2YWVmNWQ1MmViXkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1_SX300.jpg'
 CREATE (e1)-[:HAS_INFO]->(ie1)
-CREATE (e2:Project:Subtitles:Offline { name: 'Назва іншай серыі' })
-SET e2.type = 2,
+CREATE (e2:Project:MovieSubtitles { name: 'Назва іншай серыі' })
+SET e2.level = 2,
     e2.createdAt = datetime(),
     e2.updatedAt = datetime()
-CREATE (ps2:ProjectSettings {status: 2, access: 3, abc: 1, spelling: 1})
+CREATE (ps2:ProjectSettings {statusId: 2, accessId: 3, abcId: 1, spellingId: 1})
 CREATE (e2)-[:HAS_SETTINGS]->(ps2)
 CREATE (s)-[:IS_PARENT_OF]->(e2)
 CREATE (ie2:IMDB:Episode)
@@ -121,11 +121,11 @@ SET ie2.title = 'My new episode',
 CREATE (e2)-[:HAS_INFO]->(ie2)
 ;
 
-CREATE (p:Project:Subtitles:Online { name: 'Зорныя войны' })
-    SET p.type = 3,
+CREATE (p:Project:VideoStreamSubtitles { name: 'Зорныя войны' })
+    SET p.level = 3,
     p.createdAt = datetime(),
     p.updatedAt = datetime()
-CREATE (ps:ProjectSettings { status: 1, access: 2, abc: 1, spelling: 1 })
+CREATE (ps:ProjectSettings { statusId: 1, accessId: 2, abcId: 1, spellingId: 1 })
 CREATE (p)-[:HAS_SETTINGS]->(ps)
 CREATE (vi:VideoInfo)
 SET vi.service = 1,
