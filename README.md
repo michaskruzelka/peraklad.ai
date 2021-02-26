@@ -10,7 +10,7 @@ Collaborative Belarusian-language translations service
 
 ## Local set up
 -   clone recursively <br/>
-    (Some of submodules are private. Please contact the repository owner before cloning).
+    <span style="color:red;"><sup>(Some of submodules are private. Please contact the repository owner before cloning).</sup></span>
 -   create an .env file and fill it with variables from .env.sample.
 -   docker-compose up
 -   docker-compose exec app yarn start
