@@ -137,8 +137,7 @@
       "caption": "",
       "labels": [
         "Project",
-        "Subtitles",
-        "Offline"
+        "MovieSubtitles"
       ],
       "properties": {},
       "style": {}
@@ -166,8 +165,7 @@
       "caption": "",
       "labels": [
         "Project",
-        "Subtitles",
-        "Online"
+        "VideoStreamSubtitles"
       ],
       "properties": {},
       "style": {}

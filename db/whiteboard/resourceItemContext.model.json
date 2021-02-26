@@ -112,7 +112,7 @@
       "caption": "",
       "labels": [
         "ResourceItemContext",
-        "Software"
+        "SoftwareElement"
       ],
       "properties": {
         "key": "String"

@@ -148,6 +148,25 @@
       ],
       "properties": {},
       "style": {}
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 451.36541711376145,
+        "y": 250.9136293823484
+      },
+      "caption": "",
+      "style": {
+        "property-position": "inside",
+        "property-color": "#ffffff"
+      },
+      "labels": [
+        "Comment"
+      ],
+      "properties": {
+        "id": "ID!",
+        "text": "String!"
+      }
     }
   ],
   "relationships": [
@@ -211,6 +230,14 @@
       "type": "FOR [multiple]",
       "properties": {},
       "style": {}
+    },
+    {
+      "id": "n7",
+      "type": "IN [miltiple]",
+      "style": {},
+      "properties": {},
+      "fromId": "n8",
+      "toId": "n0"
     }
   ]
 }
