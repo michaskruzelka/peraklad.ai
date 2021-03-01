@@ -46,7 +46,10 @@ CREATE (ri1t3:Translation)
 SET ri1t3.text = 'Заўсёды помні пра сваё абяцанне.',
     ri1t3.status = 1,
     ri1t3.type = 2,
-    ri1t3.service = 2    
+    ri1t3.service = 2
+CREATE (ri1c1:Comment)
+SET ri1c1.text = 'Машынны пераклад лепей.'
+CREATE (ri1c1)-[:IN]->(ri1)
 CREATE (ri1t1)-[:FOR]->(ri1)
 CREATE (ri1t2)-[:FOR]->(ri1)
 CREATE (ri1t3)-[:FOR]->(ri1)

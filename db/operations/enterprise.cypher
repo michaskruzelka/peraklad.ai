@@ -31,3 +31,5 @@ CREATE CONSTRAINT translation_id_exists IF NOT EXISTS ON (t:Translation) ASSERT 
 CREATE CONSTRAINT translations_status_exists IF NOT EXISTS ON (t:Translation) ASSERT exists(t.status);
 CREATE CONSTRAINT translations_text_exists IF NOT EXISTS ON (t:Translation) ASSERT exists(t.text);
 CREATE CONSTRAINT translations_type_exists IF NOT EXISTS ON (t:Translation) ASSERT exists(t.type);
+CREATE CONSTRAINT comment_id_exists IF NOT EXISTS ON (c:Comment) ASSERT exists(c.id);
+CREATE CONSTRAINT comment_text_exists IF NOT EXISTS ON (c:Comment) ASSERT exists(c.text);
