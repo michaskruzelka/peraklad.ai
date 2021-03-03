@@ -28,6 +28,7 @@ services:
             - OPENSUBTITLES_UA=${OPENSUBTITLES_UA}
             - OPENSUBTITLES_USERNAME=${OPENSUBTITLES_USERNAME}
             - OPENSUBTITLES_PASSWORD=${OPENSUBTITLES_PASSWORD}
+            - JWT_SECRET_KEY=${JWT_SECRET_KEY}
         depends_on:
             - db
 
