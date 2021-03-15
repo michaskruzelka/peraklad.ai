@@ -2,7 +2,7 @@
 
 **Based on GRANDstack**:
 
-**GraphQl** + **React** + **Apollo as AWS Lambda** + **Neo4j Database**
+**GraphQl** + **React** + **Apollo** + **Neo4j Database**
 
 Collaborative Belarusian-language translations service
 
