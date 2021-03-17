@@ -13,7 +13,7 @@ Collaborative Belarusian-language translations service
     <span style="color:red;"><sup>(Some of submodules are private. Please contact the repository owner before cloning).</sup></span>
 -   create an .env file and fill it with variables from .env.sample.
 -   docker-compose up
--   docker-compose exec app yarn start
+-   docker-compose exec app netlify dev
 
 ## Local addresses
 -   Application - http://localhost:8889

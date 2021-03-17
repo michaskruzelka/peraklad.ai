@@ -1,5 +1,6 @@
 CREATE (p:Project:MovieSubtitles { name: 'Рэй' })
-SET p.level = 3,
+SET p.id = randomUUID(),
+    p.level = 3,
     p.description = 'Нейкае апісаньне праекта. Пра фільм, пра пераклад, пра каманду і г.д.',
     p.createdAt = datetime(),
     p.updatedAt = datetime()
@@ -14,13 +15,15 @@ SET im.title = 'Ray',
     im.posterSrc = 'https://m.media-amazon.com/images/M/MV5BMTQxNDQwNjQzOV5BMl5BanBnXkFtZTcwNTQxNDYyMQ@@._V1_SX300.jpg'
 CREATE (p)-[:HAS_INFO]->(im)
 CREATE (r:Resource)
-SET r.name = 'Ray.2004.1080p.BluRay.x264-FGT.HI',
+SET r.id = randomUUID(),
+    r.name = 'Ray.2004.1080p.BluRay.x264-FGT.HI',
     r.format = 'srt',
     r.status = 1,
     r.language = 'en'
 CREATE (p)-[:TRANSLATING]->(r)
 CREATE (ri1:ResourceItem)
-SET ri1.text = 'Always remember your promise to me.',
+SET ri1.id = randomUUID(),
+    ri1.text = 'Always remember your promise to me.',
     ri1.status = 3
 CREATE (ri1c:ResourceItemContext:Subtitle)
 CREATE (ri1ct:Timing)
@@ -34,21 +37,25 @@ CREATE (ri1rt:Timing)
 SET ri1rt.startsAt = duration({ hours: 0, minutes: 1, seconds: 47, milliseconds: 354 }),
     ri1rt.endsAt = duration({ hours: 0, minutes: 1, seconds: 50, milliseconds: 148 })
 CREATE (ri1t1:Translation)
-SET ri1t1.text = 'Заўсёды помні тое, што ты паабяцаў мне.',
+SET ri1t1.id = randomUUID(),
+    ri1t1.text = 'Заўсёды помні тое, што ты паабяцаў мне.',
     ri1t1.status = 2,
     ri1t1.type = 1
 CREATE (ri1t2:Translation)
-SET ri1t2.text = 'Заўсёды памятай пра сваё абяцанне мне.',
+SET ri1t2.id = randomUUID(),
+    ri1t2.text = 'Заўсёды памятай пра сваё абяцанне мне.',
     ri1t2.status = 1,
     ri1t2.type = 2,
     ri1t2.service = 1
 CREATE (ri1t3:Translation)
-SET ri1t3.text = 'Заўсёды помні пра сваё абяцанне.',
+SET ri1t3.id = randomUUID(),
+    ri1t3.text = 'Заўсёды помні пра сваё абяцанне.',
     ri1t3.status = 1,
     ri1t3.type = 2,
     ri1t3.service = 2
 CREATE (ri1c1:Comment)
-SET ri1c1.text = 'Машынны пераклад лепей.'
+SET ri1c1.id = randomUUID(),
+    ri1c1.text = 'Машынны пераклад лепей.'
 CREATE (ri1c1)-[:IN]->(ri1)
 CREATE (ri1t1)-[:FOR]->(ri1)
 CREATE (ri1t2)-[:FOR]->(ri1)
@@ -58,7 +65,8 @@ CREATE (ri1r)-[:FOR]->(ri1)
 CREATE (ri1c)-[:HAS_TIMING]->(ri1ct)
 CREATE (ri1)-[:HAS_CONTEXT]->(ri1c)
 CREATE (ri2:ResourceItem)
-SET ri2.text = 'Never let nobody or nothing<br/>turn you into no cripple.',
+SET ri2.id = randomUUID(),
+    ri2.text = 'Never let nobody or nothing<br/>turn you into no cripple.',
     ri2.status = 2
 CREATE (ri2c:ResourceItemContext:Subtitle)
 CREATE (ri2ct:Timing)
@@ -67,7 +75,8 @@ SET ri2ct.startsAt = duration({ hours: 0, minutes: 1, seconds: 49, milliseconds:
 CREATE (ri2c)-[:HAS_TIMING]->(ri2ct)
 CREATE (ri2)-[:HAS_CONTEXT]->(ri2c)
 CREATE (ri3:ResourceItem)
-SET ri3.text = 'DRIVER: All right!',
+SET ri3.id = randomUUID(),
+    ri3.text = 'DRIVER: All right!',
     ri3.status = 1
 CREATE (ri3c:ResourceItemContext:Subtitle)
 CREATE (ri3ct:Timing)
@@ -82,7 +91,8 @@ CREATE (r)-[:LAST_ITEM]->(ri3)
 ;
 
 CREATE (s:Project:MovieSubtitles { name: 'Крамянёвая даліна' })
-SET s.level = 1,
+SET s.id = randomUUID(),
+    s.level = 1,
     s.description = 'Нейкае апісанне праекта. Пра серыял, пра пераклад, пра каманду і г.д.',
     s.createdAt = datetime(),
     s.updatedAt = datetime()
@@ -94,7 +104,8 @@ SET is0.title = 'Silicon Valley',
     is0.posterSrc = 'https://m.media-amazon.com/images/M/MV5BOTcwNzU2MGEtMzUzNC00MzMwLWJhZGItNDY3NDllYjU5YzAyXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg'
 CREATE (s)-[:HAS_INFO]->(is0)
 CREATE (e1:Project:MovieSubtitles { name: 'Імклівае абясцэньванне' })
-SET e1.level = 2,
+SET e1.id = randomUUID(),
+    e1.level = 2,
     e1.description = 'Апісанне серыі.',
     e1.createdAt = datetime(),
     e1.updatedAt = datetime()
@@ -111,7 +122,8 @@ SET ie1.title = 'Minimum Viable Product',
     ie1.posterSrc = 'https://m.media-amazon.com/images/M/MV5BYWIyODUxOTItOTYwNS00Mjc4LWI4ZjUtNWQ2YWVmNWQ1MmViXkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1_SX300.jpg'
 CREATE (e1)-[:HAS_INFO]->(ie1)
 CREATE (e2:Project:MovieSubtitles { name: 'Назва іншай серыі' })
-SET e2.level = 2,
+SET e2.id = randomUUID(),
+    e2.level = 2,
     e2.createdAt = datetime(),
     e2.updatedAt = datetime()
 CREATE (ps2:ProjectSettings {status: 2, access: 3, abc: 1, spelling: 1})
@@ -125,7 +137,8 @@ CREATE (e2)-[:HAS_INFO]->(ie2)
 ;
 
 CREATE (p:Project:VideoStreamSubtitles { name: 'Зорныя войны' })
-    SET p.level = 3,
+    SET p.id = randomUUID(),
+    p.level = 3,
     p.createdAt = datetime(),
     p.updatedAt = datetime()
 CREATE (ps:ProjectSettings { status: 1, access: 2, abc: 1, spelling: 1 })
