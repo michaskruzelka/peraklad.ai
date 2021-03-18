@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="Electron" modified="2021-02-11T14:59:13.523Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.1.8 Chrome/87.0.4280.88 Electron/11.1.1 Safari/537.36" etag="KEPW9sGi-R_0G4qEj4Sh" version="14.1.8" type="device">
+<mxfile host="Electron" modified="2021-03-18T08:46:03.357Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.4.3 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36" etag="pWXN0G8pKnYVujODz4VQ" version="14.4.3" type="device">
   <diagram id="C9Jlau4z9qAnLddG6vog" name="Page-1">
     <mxGraphModel dx="1342" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -59,7 +59,7 @@
         <mxCell id="P_Cxg505eu_wBDpk1G0C-21" value="&lt;font style=&quot;font-size: 14px&quot;&gt;FAILED: 4&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="540" y="480" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="P_Cxg505eu_wBDpk1G0C-24" value="&lt;font style=&quot;font-size: 14px&quot;&gt;DELETED: 5&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="P_Cxg505eu_wBDpk1G0C-24" value="&lt;font style=&quot;font-size: 14px&quot; color=&quot;#ff0000&quot;&gt;&lt;s&gt;DELETED: 5&lt;/s&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="710" y="480" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="P_Cxg505eu_wBDpk1G0C-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="P_Cxg505eu_wBDpk1G0C-29" target="P_Cxg505eu_wBDpk1G0C-31" edge="1">
@@ -212,13 +212,13 @@
         <mxCell id="hdjKIUrJlN1n3xnWx1T8-38" value="&lt;font style=&quot;font-size: 14px&quot;&gt;ONLINE&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="330" y="2060" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="X9NqTXNQcJRXaWXueyJ2-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="X9NqTXNQcJRXaWXueyJ2-1" target="X9NqTXNQcJRXaWXueyJ2-2">
+        <mxCell id="X9NqTXNQcJRXaWXueyJ2-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="X9NqTXNQcJRXaWXueyJ2-1" target="X9NqTXNQcJRXaWXueyJ2-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X9NqTXNQcJRXaWXueyJ2-1" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;Online Service&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X9NqTXNQcJRXaWXueyJ2-1" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;Online Service&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="365" y="2170" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="X9NqTXNQcJRXaWXueyJ2-2" value="&lt;font style=&quot;font-size: 14px&quot;&gt;YOUTUBE: 1&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="X9NqTXNQcJRXaWXueyJ2-2" value="&lt;font style=&quot;font-size: 14px&quot;&gt;YOUTUBE: 1&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="365" y="2270" width="120" height="60" as="geometry" />
         </mxCell>
       </root>

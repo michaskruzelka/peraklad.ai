@@ -19,7 +19,9 @@ SET r.id = randomUUID(),
     r.name = 'Ray.2004.1080p.BluRay.x264-FGT.HI',
     r.format = 'srt',
     r.status = 1,
-    r.language = 'en'
+    r.language = 'en',
+    r.allItemsNum = 3,
+    r.translatedItemsNum = 1
 CREATE (p)-[:TRANSLATING]->(r)
 CREATE (ri1:ResourceItem)
 SET ri1.id = randomUUID(),

@@ -56,7 +56,9 @@
         "name": "String!",
         "language": "String!",
         "format": "String!",
-        "status": "Int!"
+        "status": "Int!",
+        "allItemsNum": "Int!",
+        "translatedItemsNum": "Int!"
       },
       "style": {
         "outside-position": "auto",
