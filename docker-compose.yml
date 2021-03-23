@@ -33,6 +33,9 @@ services:
             - MY_AWS_ACCESS_KEY_SECRET=${MY_AWS_ACCESS_KEY_SECRET}
             - S3_BUCKET_RESOURCE=${S3_BUCKET_RESOURCE}
             - S3_BUCKET_AUTONOMY_WORK=${S3_BUCKET_AUTONOMY_WORK}
+            - SMTP_MAIL=${SMTP_MAIL}
+            - SMTP_PASSWORD=${SMTP_PASSWORD}
+            - MAIN_URL=${MAIN_URL}
         depends_on:
             - db
 
