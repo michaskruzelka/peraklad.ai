@@ -44,81 +44,8 @@
     {
       "id": "n0",
       "position": {
-        "x": 0,
-        "y": 0
-      },
-      "caption": "",
-      "labels": [
-        "Team"
-      ],
-      "properties": {
-        "id": "ID!",
-        "name": "String!",
-        "avatarSrc": "String",
-        "description": "String",
-        "link": "String"
-      },
-      "style": {
-        "radius": 90
-      }
-    },
-    {
-      "id": "n1",
-      "position": {
-        "x": 241.5,
-        "y": -278.5
-      },
-      "caption": "",
-      "labels": [
-        "User"
-      ],
-      "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n2",
-      "position": {
-        "x": 368.62514835534483,
-        "y": 0
-      },
-      "caption": "",
-      "labels": [
-        "User"
-      ],
-      "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n3",
-      "position": {
-        "x": 181.9493775724482,
-        "y": 320.59152203543795
-      },
-      "caption": "",
-      "labels": [
-        "Assignment"
-      ],
-      "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n4",
-      "position": {
-        "x": -181.94937757244816,
-        "y": 320.59152203543795
-      },
-      "caption": "",
-      "labels": [
-        "ProjectInvitation"
-      ],
-      "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n5",
-      "position": {
-        "x": -368.62514835534483,
-        "y": 0
+        "x": 16,
+        "y": -162
       },
       "caption": "",
       "style": {},
@@ -126,55 +53,95 @@
         "TeamInvitation"
       ],
       "properties": {}
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 635.5,
+        "y": -162
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "User"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 16,
+        "y": -554.5
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Team"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 635.5,
+        "y": -554.5
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "User"
+      ],
+      "properties": {}
     }
   ],
   "relationships": [
     {
       "id": "n0",
-      "fromId": "n1",
-      "toId": "n0",
-      "type": "CREATED [single]",
-      "properties": {
-        "at": "DateTime!"
-      },
-      "style": {
-        "property-color": "#68bc00"
-      }
+      "type": "TO",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n1"
     },
     {
       "id": "n1",
-      "fromId": "n2",
-      "toId": "n0",
-      "type": "JOINED [multiple]",
+      "type": "REQUESTED or RESPONDED",
+      "style": {
+        "detail-position": "below",
+        "property-color": "#68bc00"
+      },
       "properties": {
         "at": "DateTime!"
       },
-      "style": {
-        "property-color": "#68bc00"
-      }
+      "fromId": "n1",
+      "toId": "n0"
     },
     {
       "id": "n2",
-      "fromId": "n3",
-      "toId": "n0",
-      "type": "TO [multiple]",
+      "type": "FOR",
+      "style": {},
       "properties": {},
-      "style": {}
+      "fromId": "n0",
+      "toId": "n2"
     },
     {
       "id": "n3",
-      "fromId": "n4",
-      "toId": "n0",
-      "type": "TO [multiple]",
+      "type": "CREATED",
+      "style": {},
       "properties": {},
-      "style": {}
+      "fromId": "n3",
+      "toId": "n2"
     },
     {
       "id": "n4",
-      "type": "FOR [multiple]",
-      "style": {},
-      "properties": {},
-      "fromId": "n5",
+      "type": "REQUESTED or RESPONDED",
+      "style": {
+        "property-color": "#68bc00"
+      },
+      "properties": {
+        "at": "DateTime!"
+      },
+      "fromId": "n3",
       "toId": "n0"
     }
   ]

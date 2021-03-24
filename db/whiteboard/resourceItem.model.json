@@ -156,17 +156,30 @@
         "y": 250.9136293823484
       },
       "caption": "",
-      "style": {
-        "property-position": "inside",
-        "property-color": "#ffffff"
-      },
       "labels": [
         "Comment"
       ],
       "properties": {
         "id": "ID!",
         "text": "String!"
+      },
+      "style": {
+        "property-position": "inside",
+        "property-color": "#ffffff"
       }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 763.8688884738835,
+        "y": 250.9136293823484
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "User"
+      ],
+      "properties": {}
     }
   ],
   "relationships": [
@@ -233,11 +246,23 @@
     },
     {
       "id": "n7",
-      "type": "IN [miltiple]",
-      "style": {},
-      "properties": {},
       "fromId": "n8",
-      "toId": "n0"
+      "toId": "n0",
+      "type": "IN [miltiple]",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "type": "ADDED",
+      "style": {
+        "property-color": "#68bc00"
+      },
+      "properties": {
+        "at": "DateTime!"
+      },
+      "fromId": "n9",
+      "toId": "n8"
     }
   ]
 }

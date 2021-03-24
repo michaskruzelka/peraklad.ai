@@ -6,7 +6,8 @@ CALL apoc.schema.assert(
         Project: ['id'],
         Resource: ['id'],
         ResourceItem: ['id'],
-        Translation: ['id']
+        Translation: ['id'],
+        User: ['username', 'email']
     },
     false
 );

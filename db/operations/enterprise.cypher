@@ -33,3 +33,9 @@ CREATE CONSTRAINT translations_text_exists IF NOT EXISTS ON (t:Translation) ASSE
 CREATE CONSTRAINT translations_type_exists IF NOT EXISTS ON (t:Translation) ASSERT exists(t.type);
 CREATE CONSTRAINT comment_id_exists IF NOT EXISTS ON (c:Comment) ASSERT exists(c.id);
 CREATE CONSTRAINT comment_text_exists IF NOT EXISTS ON (c:Comment) ASSERT exists(c.text);
+CREATE CONSTRAINT user_username_exists IF NOT EXISTS ON (u:User) ASSERT exists(u.username);
+CREATE CONSTRAINT user_email_exists IF NOT EXISTS ON (u:User) ASSERT exists(u.emai);
+CREATE CONSTRAINT user_password_exists IF NOT EXISTS ON (u:User) ASSERT exists(u.password);
+CREATE CONSTRAINT user_role_exists IF NOT EXISTS ON (u:User) ASSERT exists(u.role);
+CREATE CONSTRAINT team_id_exists IF NOT EXISTS ON (t:Team) ASSERT exists(t.id);
+CREATE CONSTRAINT team_name_exists IF NOT EXISTS ON (t:Team) ASSERT exists(t.name);

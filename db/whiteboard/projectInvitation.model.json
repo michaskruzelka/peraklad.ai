@@ -49,26 +49,12 @@
       },
       "caption": "",
       "labels": [
-        "Invitation"
+        "ProjectInvitation"
       ],
       "properties": {
-        "status": "Int!",
-        "updatedAt": "DateTime!",
-        "createdAt": "DateTime!"
+        "id": "ID!",
+        "status": "Int!"
       },
-      "style": {}
-    },
-    {
-      "id": "n1",
-      "position": {
-        "x": 190.34789312901438,
-        "y": -442.9952006551158
-      },
-      "caption": "",
-      "labels": [
-        "User"
-      ],
-      "properties": {},
       "style": {}
     },
     {
@@ -124,19 +110,6 @@
       "style": {}
     },
     {
-      "id": "n6",
-      "position": {
-        "x": 22.72106197783347,
-        "y": -634.4839991199465
-      },
-      "caption": "",
-      "labels": [
-        "User"
-      ],
-      "properties": {},
-      "style": {}
-    },
-    {
       "id": "n7",
       "position": {
         "x": -736.3478931290144,
@@ -166,43 +139,22 @@
       }
     },
     {
-      "id": "n9",
-      "position": {
-        "x": -273,
-        "y": -726.7126968846493
-      },
-      "caption": "",
-      "style": {},
-      "labels": [
-        "Team"
-      ],
-      "properties": {}
-    },
-    {
       "id": "n10",
       "position": {
         "x": -556.8472579537108,
         "y": -642.4495201880139
       },
       "caption": "",
-      "style": {},
       "labels": [
-        "User"
+        "User [the one who can respond from project side]"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {
+        "label-position": "outside"
+      }
     }
   ],
   "relationships": [
-    {
-      "id": "n0",
-      "fromId": "n1",
-      "toId": "n0",
-      "type": "SENT [multiple]",
-      "properties": {
-        "at": "DateTime!"
-      },
-      "style": {}
-    },
     {
       "id": "n1",
       "fromId": "n2",
@@ -211,7 +163,9 @@
       "properties": {
         "at": "DateTime!"
       },
-      "style": {}
+      "style": {
+        "property-color": "#68bc00"
+      }
     },
     {
       "id": "n2",
@@ -227,16 +181,6 @@
       "toId": "n4",
       "type": "TO [single]",
       "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n4",
-      "fromId": "n6",
-      "toId": "n0",
-      "type": "CANCELED",
-      "properties": {
-        "at": "DateTime!"
-      },
       "style": {}
     },
     {
@@ -257,60 +201,49 @@
     },
     {
       "id": "n7",
-      "fromId": "n3",
-      "toId": "n0",
-      "type": "ACCEPTED [multiple]",
-      "properties": {
-        "at": "DateTime!"
-      },
+      "type": "RESPONDED [single]",
       "style": {
         "property-position": "outside",
-        "detail-position": "below"
-      }
-    },
-    {
-      "id": "n8",
-      "fromId": "n4",
-      "toId": "n5",
-      "type": "DECLINED [multiple]",
+        "detail-position": "below",
+        "property-color": "#68bc00"
+      },
       "properties": {
         "at": "DateTime!"
       },
-      "style": {
-        "detail-position": "below"
-      }
-    },
-    {
-      "id": "n9",
-      "type": "FOR [single]",
-      "style": {},
-      "properties": {},
-      "fromId": "n0",
-      "toId": "n9"
-    },
-    {
-      "id": "n10",
-      "type": "TO [single]",
-      "style": {},
-      "properties": {},
-      "fromId": "n0",
-      "toId": "n10"
-    },
-    {
-      "id": "n11",
-      "type": "CREATED",
-      "style": {},
-      "properties": {},
-      "fromId": "n10",
-      "toId": "n9"
+      "fromId": "n3",
+      "toId": "n0"
     },
     {
       "id": "n12",
-      "type": "OWNS",
-      "style": {},
-      "properties": {},
       "fromId": "n10",
-      "toId": "n7"
+      "toId": "n7",
+      "type": "OWNS",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n13",
+      "type": "RESPONDED [single]",
+      "style": {
+        "property-color": "#68bc00"
+      },
+      "properties": {
+        "at": "DateTime!"
+      },
+      "fromId": "n8",
+      "toId": "n5"
+    },
+    {
+      "id": "n14",
+      "type": "RESPONDED",
+      "style": {
+        "property-color": "#68bc00"
+      },
+      "properties": {
+        "at": "DateTime!"
+      },
+      "fromId": "n10",
+      "toId": "n0"
     }
   ]
 }

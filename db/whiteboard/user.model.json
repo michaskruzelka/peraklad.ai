@@ -52,7 +52,6 @@
         "User"
       ],
       "properties": {
-        "id": "ID!",
         "email": "String!",
         "password": "String!",
         "username": "String!",
@@ -71,11 +70,11 @@
         "y": 0
       },
       "caption": "",
-      "style": {},
       "labels": [
         "UserSettings"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n2",
@@ -84,12 +83,12 @@
         "y": -429.5
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Service",
         "Youtube"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
@@ -98,12 +97,12 @@
         "y": -302.16666803021445
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Service",
         "Yandex"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n4",
@@ -112,46 +111,46 @@
         "y": 0
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Service",
         "Google"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     }
   ],
   "relationships": [
     {
       "id": "n0",
-      "type": "HAS_SETTINGS [single]",
-      "style": {},
-      "properties": {},
       "fromId": "n0",
-      "toId": "n1"
+      "toId": "n1",
+      "type": "HAS_SETTINGS [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n1",
-      "type": "SPECIFIC_FOR",
-      "style": {},
-      "properties": {},
       "fromId": "n1",
-      "toId": "n2"
+      "toId": "n2",
+      "type": "SPECIFIC_FOR",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n2",
-      "type": "SPECIFIC_FOR",
-      "style": {},
-      "properties": {},
       "fromId": "n1",
-      "toId": "n3"
+      "toId": "n3",
+      "type": "SPECIFIC_FOR",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
-      "type": "SPECIFIC_FOR ",
-      "style": {},
-      "properties": {},
       "fromId": "n1",
-      "toId": "n4"
+      "toId": "n4",
+      "type": "SPECIFIC_FOR ",
+      "properties": {},
+      "style": {}
     }
   ]
 }

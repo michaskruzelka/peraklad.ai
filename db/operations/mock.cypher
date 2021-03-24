@@ -1,3 +1,34 @@
+CREATE (u1:User {
+    username: 'user1',
+    email: 'user1@fake.com',
+    roles: ['regular']
+})
+CREATE (u2:User {
+    username: 'user2',
+    email: 'user2@fake.com',
+    roles: ['regular']
+})
+CREATE (u3:User {
+    username: 'user3',
+    email: 'user3@fake.com',
+    roles: ['regular']
+})
+CREATE (u4:User {
+    username: 'user4',
+    email: 'user4@fake.com',
+    roles: ['regular']
+})
+CREATE (t1:Team {
+    id: randomUUID(),
+    name: 'Team 1'
+})
+CREATE (t2:Team {
+    id: randomUUID(),
+    name: 'Team 2'
+})
+CREATE (u1)-[:CREATED { at: datetime() }]->(t1)
+CREATE (u2)-[:JOINED { at: datetime() }]->(t2)
+CREATE (u4)-[:CREATED { at: datetime() }]->(t2)
 CREATE (p:Project:MovieSubtitles { name: 'Рэй' })
 SET p.id = randomUUID(),
     p.level = 3,
@@ -6,6 +37,9 @@ SET p.id = randomUUID(),
     p.updatedAt = datetime()
 CREATE (ps:ProjectSettings { status: 1, access: 2, abc: 1, spelling: 2 })
 CREATE (p)-[:HAS_SETTINGS]->(ps)
+CREATE (u1)-[:OWNS]->(p)
+CREATE (a1:Assignment)
+CREATE (u1)-[:SUBMITTED { at: datetime() }]->(a1)-[:FOR]->(p)
 CREATE (im:IMDB:Movie)
 SET im.title = 'Ray',
     im.language = 'en',
@@ -19,10 +53,9 @@ SET r.id = randomUUID(),
     r.name = 'Ray.2004.1080p.BluRay.x264-FGT.HI',
     r.format = 'srt',
     r.status = 1,
-    r.language = 'en',
-    r.allItemsNum = 3,
-    r.translatedItemsNum = 1
+    r.language = 'en'
 CREATE (p)-[:TRANSLATING]->(r)
+CREATE (u2)-[:UPLOADED { at: datetime() }]->(r)
 CREATE (ri1:ResourceItem)
 SET ri1.id = randomUUID(),
     ri1.text = 'Always remember your promise to me.',
@@ -43,21 +76,27 @@ SET ri1t1.id = randomUUID(),
     ri1t1.text = 'Заўсёды помні тое, што ты паабяцаў мне.',
     ri1t1.status = 2,
     ri1t1.type = 1
+CREATE (u2)-[:SUGGESTED { at: datetime() }]->(ri1t1)
+CREATE (u1)-[:APPROVED { at: datetime() }]->(ri1t1)
+CREATE (u3)-[:LIKED { at: datetime() }]->(ri1t1)
 CREATE (ri1t2:Translation)
 SET ri1t2.id = randomUUID(),
     ri1t2.text = 'Заўсёды памятай пра сваё абяцанне мне.',
     ri1t2.status = 1,
     ri1t2.type = 2,
     ri1t2.service = 1
+CREATE (u1)-[:SUGGESTED { at: datetime() }]->(ri1t2)
 CREATE (ri1t3:Translation)
 SET ri1t3.id = randomUUID(),
     ri1t3.text = 'Заўсёды помні пра сваё абяцанне.',
     ri1t3.status = 1,
     ri1t3.type = 2,
     ri1t3.service = 2
+CREATE (u1)-[:SUGGESTED { at: datetime() }]->(ri1t3)    
 CREATE (ri1c1:Comment)
 SET ri1c1.id = randomUUID(),
     ri1c1.text = 'Машынны пераклад лепей.'
+CREATE (u2)-[:ADDED]->(ri1c1)
 CREATE (ri1c1)-[:IN]->(ri1)
 CREATE (ri1t1)-[:FOR]->(ri1)
 CREATE (ri1t2)-[:FOR]->(ri1)
@@ -90,7 +129,9 @@ CREATE (ri1)-[:NEXT]->(ri2)
 CREATE (ri2)-[:NEXT]->(ri3)
 CREATE (r)-[:FIRST_ITEM]->(ri1)
 CREATE (r)-[:LAST_ITEM]->(ri3)
-;
+CREATE (u1)-[:PARTICIPATED_IN { points: 15 }]->(p)
+CREATE (u2)-[:PARTICIPATED_IN { points: 13 }]->(p)
+
 
 CREATE (s:Project:MovieSubtitles { name: 'Крамянёвая даліна' })
 SET s.id = randomUUID(),
@@ -98,6 +139,7 @@ SET s.id = randomUUID(),
     s.description = 'Нейкае апісанне праекта. Пра серыял, пра пераклад, пра каманду і г.д.',
     s.createdAt = datetime(),
     s.updatedAt = datetime()
+CREATE (u3)-[:OWNS]->(s)
 CREATE (is0:IMDB:Series)
 SET is0.title = 'Silicon Valley',
     is0.language = 'en',
@@ -111,6 +153,7 @@ SET e1.id = randomUUID(),
     e1.description = 'Апісанне серыі.',
     e1.createdAt = datetime(),
     e1.updatedAt = datetime()
+CREATE (u3)-[:OWNS]->(e1)
 CREATE (ps1:ProjectSettings { status: 2, access: 3, abc: 1, spelling: 1 })
 CREATE (e1)-[:HAS_SETTINGS]->(ps1)
 CREATE (s)-[:IS_PARENT_OF]->(e1)
@@ -128,6 +171,12 @@ SET e2.id = randomUUID(),
     e2.level = 2,
     e2.createdAt = datetime(),
     e2.updatedAt = datetime()
+CREATE (u3)-[:OWNS]->(e2)
+CREATE (e2i1:ProjectInvitation {
+    id: randomUUID(),
+    status: 1
+})
+CREATE (u3)-[:REQUESTED { at: datetime() }]->(e2i1)-[:FOR]->(e2)
 CREATE (ps2:ProjectSettings {status: 2, access: 3, abc: 1, spelling: 1})
 CREATE (e2)-[:HAS_SETTINGS]->(ps2)
 CREATE (s)-[:IS_PARENT_OF]->(e2)
@@ -136,18 +185,19 @@ SET ie2.title = 'My new episode',
     ie2.episodeNum = 2,
     ie2.seasonNum = 1
 CREATE (e2)-[:HAS_INFO]->(ie2)
-;
 
-CREATE (p:Project:VideoStreamSubtitles { name: 'Зорныя войны' })
-    SET p.id = randomUUID(),
-    p.level = 3,
-    p.createdAt = datetime(),
-    p.updatedAt = datetime()
-CREATE (ps:ProjectSettings { status: 1, access: 2, abc: 1, spelling: 1 })
-CREATE (p)-[:HAS_SETTINGS]->(ps)
+
+CREATE (py:Project:VideoStreamSubtitles { name: 'Зорныя войны' })
+    SET py.id = randomUUID(),
+    py.level = 3,
+    py.createdAt = datetime(),
+    py.updatedAt = datetime()
+CREATE (u3)-[:OWNS]->(py)
+CREATE (pys:ProjectSettings { status: 1, access: 2, abc: 1, spelling: 1 })
+CREATE (py)-[:HAS_SETTINGS]->(pys)
 CREATE (vi:VideoInfo)
 SET vi.service = 1,
     vi.url = 'https://www.youtube.com/watch?v=8Qn_spdM5Zg',
     vi.language = 'en'
-CREATE (p)-[:HAS_INFO]->(vi)
+CREATE (py)-[:HAS_INFO]->(vi)
 ;

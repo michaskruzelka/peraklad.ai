@@ -56,9 +56,7 @@
         "name": "String!",
         "language": "String!",
         "format": "String!",
-        "status": "Int!",
-        "allItemsNum": "Int!",
-        "translatedItemsNum": "Int!"
+        "status": "Int!"
       },
       "style": {
         "outside-position": "auto",
@@ -157,6 +155,19 @@
       ],
       "properties": {},
       "style": {}
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 430,
+        "y": -89
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "User"
+      ],
+      "properties": {}
     }
   ],
   "relationships": [
@@ -227,6 +238,18 @@
       "style": {
         "property-color": "#68bc00"
       }
+    },
+    {
+      "id": "n7",
+      "type": "RESUMED",
+      "style": {
+        "property-color": "#68bc00"
+      },
+      "properties": {
+        "at": "DateTime!"
+      },
+      "fromId": "n0",
+      "toId": "n8"
     }
   ]
 }
