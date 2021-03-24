@@ -177,6 +177,7 @@ CREATE (e2i1:ProjectInvitation {
     status: 1
 })
 CREATE (u3)-[:REQUESTED { at: datetime() }]->(e2i1)-[:FOR]->(e2)
+CREATE (e2i1)-[:TO]->(u1)
 CREATE (ps2:ProjectSettings {status: 2, access: 3, abc: 1, spelling: 1})
 CREATE (e2)-[:HAS_SETTINGS]->(ps2)
 CREATE (s)-[:IS_PARENT_OF]->(e2)
