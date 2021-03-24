@@ -39,3 +39,7 @@ CREATE CONSTRAINT user_password_exists IF NOT EXISTS ON (u:User) ASSERT exists(u
 CREATE CONSTRAINT user_role_exists IF NOT EXISTS ON (u:User) ASSERT exists(u.role);
 CREATE CONSTRAINT team_id_exists IF NOT EXISTS ON (t:Team) ASSERT exists(t.id);
 CREATE CONSTRAINT team_name_exists IF NOT EXISTS ON (t:Team) ASSERT exists(t.name);
+CREATE CONSTRAINT project_invitation_id_exists IF NOT EXISTS ON (pi:ProjectInvitation) ASSERT exists(pi.id);
+CREATE CONSTRAINT project_invitation_status_exists IF NOT EXISTS ON (pi:ProjectInvitation) ASSERT exists(pi.status);
+CREATE CONSTRAINT team_invitation_id_exists IF NOT EXISTS ON (ti:TeamInvitation) ASSERT exists(ti.id);
+CREATE CONSTRAINT team_invitation_status_exists IF NOT EXISTS ON (ti:TeamInvitation) ASSERT exists(ti.status);
