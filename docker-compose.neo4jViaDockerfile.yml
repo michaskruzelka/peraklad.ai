@@ -37,6 +37,8 @@ services:
             - SMTP_MAIL=${SMTP_MAIL}
             - SMTP_PASSWORD=${SMTP_PASSWORD}
             - MAIN_URL=${MAIN_URL}
+            - SMS_API_KEY=${SMS_API_KEY}
+            - SMS_API_SECRET=${SMS_API_SECRET}
         depends_on:
             - db
 
