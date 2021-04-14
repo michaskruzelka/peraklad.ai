@@ -7,7 +7,7 @@ CALL apoc.schema.assert(
         Resource: ['id'],
         ResourceItem: ['id'],
         Translation: ['id'],
-        User: ['username', 'email'],
+        User: ['username', 'email', 'phone'],
         ProjectInvitation: ['id'],
         TeamInvitation: ['id']
     },

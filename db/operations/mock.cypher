@@ -1,21 +1,25 @@
 CREATE (u1:User {
     username: 'user1',
     email: 'user1@fake.com',
+    phone: '1234567',
     roles: ['regular']
 })
 CREATE (u2:User {
     username: 'user2',
     email: 'user2@fake.com',
+    phone: '12345678',
     roles: ['regular']
 })
 CREATE (u3:User {
     username: 'user3',
     email: 'user3@fake.com',
+    phone: '12345679',
     roles: ['regular']
 })
 CREATE (u4:User {
     username: 'user4',
     email: 'user4@fake.com',
+    phone: '1234566',
     roles: ['regular']
 })
 CREATE (t1:Team {

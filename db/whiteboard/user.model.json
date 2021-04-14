@@ -55,11 +55,11 @@
         "email": "String!",
         "password": "String!",
         "username": "String!",
-        "fullName": "String",
         "avatarSrc": "String",
         "link": "String",
-        "role": "Int!",
-        "seenNotificationsAt": "DateTime"
+        "roles": "[String!]!",
+        "seenNotificationsAt": "DateTime",
+        "phone": "String!"
       },
       "style": {}
     },
