@@ -40,6 +40,7 @@ services:
             - SMS_API_KEY=${SMS_API_KEY}
             - SMS_API_SECRET=${SMS_API_SECRET}
             - REACT_APP_API_URL=${REACT_APP_API_URL}
+            - REACT_APP_MAIN_URL=${REACT_APP_MAIN_URL}
         depends_on:
             - db
 
