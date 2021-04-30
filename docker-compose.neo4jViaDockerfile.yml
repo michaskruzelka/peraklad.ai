@@ -43,6 +43,8 @@ services:
             - REACT_APP_MAIN_URL=${REACT_APP_MAIN_URL}
             - GOOGLE_OAUTH2_CLIENT_ID=${GOOGLE_OAUTH2_CLIENT_ID}
             - GOOGLE_OAUTH2_CLIENT_SECRET=${GOOGLE_OAUTH2_CLIENT_SECRET}
+            - FACEBOOK_APP_ID=${FACEBOOK_APP_ID}
+            - FACEBOOK_APP_SECRET=${FACEBOOK_APP_SECRET}
         depends_on:
             - db
 
