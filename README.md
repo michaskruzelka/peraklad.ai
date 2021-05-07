@@ -12,8 +12,18 @@ Collaborative Belarusian-language translations service
 -   clone recursively <br/>
     <span style="color:red;"><sup>(Some of submodules are private. Please contact the repository owner before cloning).</sup></span>
 -   create an .env file and fill it with variables from .env.sample.
--   docker-compose up
--   docker-compose exec app netlify dev
+-   run containers:
+```bash
+docker-compose up
+```
+- start API
+```bash
+docker-compose exec app yarn start-api
+```
+-   start UI
+```bash
+docker-compose exec app netlify dev
+```
 
 ## Local addresses
 -   Application - http://localhost:8889
