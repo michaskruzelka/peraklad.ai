@@ -250,16 +250,16 @@
     },
     {
       "id": "n1",
-      "fromId": "n2",
-      "toId": "n0",
-      "type": "PARTICIPATED_IN [multiple]",
-      "properties": {
-        "points": "Int!"
-      },
+      "type": "PARTICIPATES_IN [multiple]",
       "style": {
         "property-position": "outside",
         "property-color": "#68bc00"
-      }
+      },
+      "properties": {
+        "points": "Int!"
+      },
+      "fromId": "n2",
+      "toId": "n0"
     },
     {
       "id": "n2",
