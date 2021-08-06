@@ -1,6 +1,7 @@
 CALL apoc.schema.assert(
     {
-        ResourceItem: ['status']
+        ResourceItem: ['status'],
+        Project: ['createdAt']
     },
     {
         Project: ['id'],
