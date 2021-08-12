@@ -9,23 +9,36 @@ Collaborative Belarusian-language translations service
 Калектыўны пераклад субтытраў і інтэрфейсаў для гульняў, сайтаў, дадаткаў, ПЗ.
 
 ## Local set up
+
 -   clone recursively <br/>
-    <span style="color:red;"><sup>(Some of submodules are private. Please contact the repository owner before cloning).</sup></span>
+    <span style="color:red;"><sup>(All of submodules are private. Please contact the repository owner before cloning).</sup></span>
 -   create an .env file and fill it with variables from .env.sample.
 -   run containers:
+
 ```bash
 docker-compose up
 ```
-- start API
+
+-   start API
+
 ```bash
-docker-compose exec app yarn start-api
+docker-compose exec api yarn start
 ```
--   start UI
+
+-   start UI (for those who are responsible for deployment)
+
 ```bash
-docker-compose exec app netlify dev
+docker-compose exec web netlify dev
+```
+
+-   start UI (for everyone else)
+
+```bash
+docker-compose exec web yarn start
 ```
 
 ## Local addresses
--   Application - http://localhost:8889
--   Neo4j Browser - http://localhost:7474/
--   GraphQL Playground - http://localhost:8889/api
+
+-   Application (WEB) - http://localhost:8889 (if netlify proxy) or http://localhost:3001 (if yarn start)
+-   GraphQL Playground (API) - http://localhost:4001/
+-   Neo4j Browser (DB) - http://localhost:7474/

@@ -1,20 +1,18 @@
 version: '3'
 
 services:
-    app:
+    api:
         build:
-            context: app
+            context: api
             args:
-                NODE_VERSION: ${NODE_VERSION}
-        container_name: peraklad_app
+                NODE_VERSION: ${API_NODE_VERSION}
+        container_name: peraklad_api
         tty: true
         stdin_open: true
         ports:
-            - 8889:8888
             - 4001:4000
-            - 3001:3000
         volumes:
-            - ./app/www/:/var/www/html/:rw
+            - ./api/code/:/var/www/html/:rw
         environment:
             - NEO4J_URI=${NEO4J_URI}
             - NEO4J_USER=${NEO4J_USER}
@@ -35,17 +33,35 @@ services:
             - S3_BUCKET_POSTER=${S3_BUCKET_POSTER}
             - SMTP_MAIL=${SMTP_MAIL}
             - SMTP_PASSWORD=${SMTP_PASSWORD}
-            - MAIN_URL=${MAIN_URL}
+            - CLIENT_APP_URL=${CLIENT_APP_URL}
             - SMS_API_KEY=${SMS_API_KEY}
             - SMS_API_SECRET=${SMS_API_SECRET}
-            - REACT_APP_API_URL=${REACT_APP_API_URL}
-            - REACT_APP_MAIN_URL=${REACT_APP_MAIN_URL}
             - GOOGLE_OAUTH2_CLIENT_ID=${GOOGLE_OAUTH2_CLIENT_ID}
             - GOOGLE_OAUTH2_CLIENT_SECRET=${GOOGLE_OAUTH2_CLIENT_SECRET}
             - FACEBOOK_APP_ID=${FACEBOOK_APP_ID}
             - FACEBOOK_APP_SECRET=${FACEBOOK_APP_SECRET}
         depends_on:
             - db
+
+    web:
+        build:
+            context: web
+            args:
+                NODE_VERSION: ${WEB_NODE_VERSION}
+        container_name: peraklad_web
+        tty: true
+        stdin_open: true
+        ports:
+            - 8889:8888
+            - 3001:3000
+        volumes:
+            - ./web/code/:/var/www/html/:rw
+        environment:
+            - NODE_ENV=${NODE_ENV}
+            - REACT_APP_API_URL=${REACT_APP_API_URL}
+            - REACT_APP_MAIN_URL=${REACT_APP_MAIN_URL}
+        depends_on:
+            - api
 
     db:
         image: ${DB_IMAGE}
