@@ -1,3 +1,6 @@
+[submodule "web/code"]
+	path = web/code
+	url = git@github.com:michaskruzelka/peraklad.web.git
 [submodule "api/code"]
-    path = api/code
-    url = https://github.com/michaskruzelka/peraklad.api.git
+	path = api/code
+	url = git@github.com:michaskruzelka/peraklad.api.git
