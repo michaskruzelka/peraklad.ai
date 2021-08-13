@@ -1,6 +1,8 @@
 [submodule "web/code"]
 	path = web/code
 	url = git@github.com:michaskruzelka/peraklad.web.git
+    branch = develop
 [submodule "api/code"]
 	path = api/code
 	url = git@github.com:michaskruzelka/peraklad.api.git
+    branch = develop
