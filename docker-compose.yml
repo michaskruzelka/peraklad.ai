@@ -78,6 +78,7 @@ services:
             - ./db/operations/apoc.conf:/conf/apoc.conf
         environment:
             - NEO4J_AUTH=${NEO4J_USER}/${NEO4J_PASSWORD}
+            - NEO4J_dbms_security_procedures_allowlist=apoc.*
             - NEO4JLABS_PLUGINS=["apoc"]
             - NEO4J_dbms_default__database=${NEO4J_DATABASE}
             - NEO4J_dbms_memory_pagecache_size=${MEMORY_PAGECACHE_SIZE}
