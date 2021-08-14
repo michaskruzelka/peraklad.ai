@@ -25,7 +25,7 @@ docker-compose up
 docker-compose exec api yarn start
 ```
 
--   start UI
+-   start WEB APP
 
 ```bash
 docker-compose exec web yarn start

@@ -39,8 +39,6 @@ services:
             - GOOGLE_OAUTH2_CLIENT_SECRET=${GOOGLE_OAUTH2_CLIENT_SECRET}
             - FACEBOOK_APP_ID=${FACEBOOK_APP_ID}
             - FACEBOOK_APP_SECRET=${FACEBOOK_APP_SECRET}
-        depends_on:
-            - db
 
     web:
         build:
@@ -60,25 +58,3 @@ services:
             - REACT_APP_MAIN_URL=${REACT_APP_MAIN_URL}
         depends_on:
             - api
-
-    db:
-        image: ${DB_IMAGE}
-        container_name: peraklad_db
-        tty: true
-        stdin_open: true
-        restart: unless-stopped
-        ports:
-            - 7474:7474
-            - 7687:7687
-        volumes:
-            - ./db/dbms/data:/data
-            - ./db/dbms/logs:/logs
-            - ./db/operations/apoc.conf:/conf/apoc.conf
-        environment:
-            - NEO4J_AUTH=${NEO4J_USER}/${NEO4J_PASSWORD}
-            - NEO4J_dbms_security_procedures_allowlist=apoc.*
-            - NEO4JLABS_PLUGINS=["apoc"]
-            - NEO4J_dbms_default__database=${NEO4J_DATABASE}
-            - NEO4J_dbms_memory_pagecache_size=${MEMORY_PAGECACHE_SIZE}
-            - NEO4J_dbms_memory_heap_initial__size=${MEMORY_HEAP_INITIAL_SIZE}
-            - NEO4J_dbms_memory_heap_max__size=${MEMORY_HEAP_MAX_SIZE}
