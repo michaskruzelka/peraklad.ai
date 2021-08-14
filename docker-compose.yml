@@ -33,7 +33,7 @@ services:
             - S3_BUCKET_POSTER=${S3_BUCKET_POSTER}
             - SMTP_MAIL=${SMTP_MAIL}
             - SMTP_PASSWORD=${SMTP_PASSWORD}
-            - CLIENT_APP_URL=${CLIENT_APP_URL}
+            - CLIENT_APP_URL=${REACT_APP_MAIN_URL}
             - SMS_API_KEY=${SMS_API_KEY}
             - SMS_API_SECRET=${SMS_API_SECRET}
             - GOOGLE_OAUTH2_CLIENT_ID=${GOOGLE_OAUTH2_CLIENT_ID}
