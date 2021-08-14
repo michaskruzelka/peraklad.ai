@@ -25,13 +25,7 @@ docker-compose up
 docker-compose exec api yarn start
 ```
 
--   start UI (for those who are responsible for deployment)
-
-```bash
-docker-compose exec web netlify dev
-```
-
--   start UI (for everyone else)
+-   start UI
 
 ```bash
 docker-compose exec web yarn start
@@ -39,6 +33,6 @@ docker-compose exec web yarn start
 
 ## Local addresses
 
--   Application (WEB) - http://localhost:8889 (if netlify proxy) or http://localhost:3001 (if yarn start)
--   GraphQL Playground (API) - http://localhost:4001/
--   Neo4j Browser (DB) - http://localhost:7474/
+-   Application (WEB) - http://localhost:3001
+-   GraphQL Playground (API) - http://localhost:4001
+-   Neo4j Browser (DB) - http://localhost:7474

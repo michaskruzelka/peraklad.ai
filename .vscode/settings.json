@@ -6,7 +6,7 @@
     "prettier.printWidth": 100,
     "editor.rulers": [100, 120],
     "window.zoomLevel": 0,
-    "editor.fontSize": 15,
+    "editor.fontSize": 16,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
