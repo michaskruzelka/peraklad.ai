@@ -52,13 +52,15 @@ services:
         stdin_open: true
         ports:
             - 3001:3000
+            - 5001:5000
         volumes:
             - ./web/code/:/var/www/html/:rw
         environment:
             - NODE_ENV=${NODE_ENV}
             - REACT_APP_API_URL=${REACT_APP_API_URL}
             - REACT_APP_MAIN_URL=${REACT_APP_MAIN_URL}
-            - REACT_APP_MAINTENANCE_MODE={REACT_APP_MAINTENANCE_MODE}
+            - REACT_APP_MAINTENANCE_MODE=${REACT_APP_MAINTENANCE_MODE}
+            - REACT_APP_RELEASE_AT=${REACT_APP_RELEASE_AT}
         depends_on:
             - api
 
