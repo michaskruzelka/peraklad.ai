@@ -1,8 +1,10 @@
+![peraklad.ai cover](https://github.com/michaskruzelka/peraklad.ai/blob/master/cover.png)
+
 # Перакладай - peraklad.ai (_in development_)
 
 **Based on GRANDstack**:
 
-**GraphQl** + **React** + **Apollo** + **Neo4j Database**
+**GraphQL** + **React** + **Apollo** + **Neo4j Database**
 
 Collaborative Belarusian-language translations service
 
