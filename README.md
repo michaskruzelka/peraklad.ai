@@ -1,3 +1,5 @@
+![peraklad.ai cover](https://github.com/michaskruzelka/peraklad.ai/blob/master/cover.png)
+
 # Перакладай - peraklad.ai (_in development_)
 
 **Based on GRANDstack**:
