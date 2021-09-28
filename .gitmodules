@@ -6,3 +6,6 @@
 	path = api/code
 	url = git@github.com:michaskruzelka/peraklad.api.git
     branch = develop
+[submodule "docs"]
+	path = docs
+	url = git@github.com:michaskruzelka/peraklad.docs.git
