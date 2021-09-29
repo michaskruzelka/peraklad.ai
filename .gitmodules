@@ -9,3 +9,4 @@
 [submodule "docs"]
 	path = docs
 	url = git@github.com:michaskruzelka/peraklad.docs.git
+    branch = master
