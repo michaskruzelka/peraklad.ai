@@ -5,13 +5,18 @@
     "border-color": "#000000",
     "radius": 75,
     "node-padding": 5,
+    "node-margin": 2,
     "outside-position": "auto",
+    "node-icon-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
     "caption-position": "inside",
     "caption-max-width": 200,
     "caption-color": "#ffffff",
     "caption-font-size": 20,
     "caption-font-weight": "normal",
     "label-position": "inside",
+    "label-display": "pill",
     "label-color": "#000000",
     "label-background-color": "#ffffff",
     "label-border-color": "#848484",
@@ -29,6 +34,7 @@
     "margin-peer": 20,
     "attachment-start": "normal",
     "attachment-end": "normal",
+    "relationship-icon-image": "",
     "type-color": "#848484",
     "type-background-color": "#ffffff",
     "type-border-color": "#848484",
@@ -36,6 +42,7 @@
     "type-font-size": 21,
     "type-padding": 5,
     "property-position": "outside",
+    "property-alignment": "colon",
     "property-color": "#848484",
     "property-font-size": 20,
     "property-font-weight": "normal"
@@ -44,8 +51,8 @@
     {
       "id": "n0",
       "position": {
-        "x": -47,
-        "y": 0
+        "x": 75,
+        "y": 479.5
       },
       "caption": "",
       "labels": [
@@ -66,8 +73,8 @@
     {
       "id": "n1",
       "position": {
-        "x": 382.5,
-        "y": 0
+        "x": 504.5,
+        "y": 479.5
       },
       "caption": "",
       "labels": [
@@ -79,8 +86,8 @@
     {
       "id": "n2",
       "position": {
-        "x": 382.5,
-        "y": -429.5
+        "x": 504.5,
+        "y": 50
       },
       "caption": "",
       "labels": [
@@ -93,29 +100,34 @@
     {
       "id": "n3",
       "position": {
-        "x": 687.7303306218407,
-        "y": -302.16666803021445
+        "x": 809.7303306218407,
+        "y": 177.33333196978555
       },
       "caption": "",
       "labels": [
         "Service",
         "Yandex"
       ],
-      "properties": {},
+      "properties": {
+        "apiKey": "String"
+      },
       "style": {}
     },
     {
       "id": "n4",
       "position": {
-        "x": 812,
-        "y": 0
+        "x": 934,
+        "y": 479.5
       },
       "caption": "",
       "labels": [
         "Service",
         "Google"
       ],
-      "properties": {},
+      "properties": {
+        "apiKey": "String",
+        "projectId": "String"
+      },
       "style": {}
     }
   ],

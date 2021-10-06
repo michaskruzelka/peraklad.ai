@@ -5,13 +5,18 @@
     "border-color": "#000000",
     "radius": 75,
     "node-padding": 5,
+    "node-margin": 2,
     "outside-position": "auto",
+    "node-icon-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
     "caption-position": "inside",
     "caption-max-width": 200,
     "caption-color": "#ffffff",
     "caption-font-size": 20,
     "caption-font-weight": "normal",
     "label-position": "inside",
+    "label-display": "pill",
     "label-color": "#000000",
     "label-background-color": "#ffffff",
     "label-border-color": "#848484",
@@ -29,6 +34,7 @@
     "margin-peer": 20,
     "attachment-start": "normal",
     "attachment-end": "normal",
+    "relationship-icon-image": "",
     "type-color": "#848484",
     "type-background-color": "#ffffff",
     "type-border-color": "#848484",
@@ -36,6 +42,7 @@
     "type-font-size": 21,
     "type-padding": 5,
     "property-position": "outside",
+    "property-alignment": "colon",
     "property-color": "#848484",
     "property-font-size": 20,
     "property-font-weight": "normal"
@@ -44,8 +51,8 @@
     {
       "id": "n0",
       "position": {
-        "x": -367.6034943949983,
-        "y": -477
+        "x": 530.418556746318,
+        "y": 527.8720562776609
       },
       "caption": "",
       "labels": [
@@ -54,10 +61,10 @@
       "properties": {
         "id": "ID!",
         "name": "String!",
-        "type": "Int!",
         "description": "String",
         "createdAt": "DateTime!",
-        "updatedAt": "DateTime!"
+        "updatedAt": "DateTime!",
+        "level": "Int!"
       },
       "style": {
         "property-font-weight": "normal"
@@ -66,8 +73,8 @@
     {
       "id": "n1",
       "position": {
-        "x": -472.8675419740755,
-        "y": 17.206890844208317
+        "x": 425.1545091672408,
+        "y": 1022.0789471218693
       },
       "caption": "",
       "labels": [
@@ -79,8 +86,8 @@
     {
       "id": "n2",
       "position": {
-        "x": -218.12943497511014,
-        "y": 0.8720562776609881
+        "x": 905.6372497327966,
+        "y": 859.4065628437484
       },
       "caption": "",
       "labels": [
@@ -92,21 +99,8 @@
     {
       "id": "n3",
       "position": {
-        "x": 7.615198591480237,
-        "y": -145.46549343391263
-      },
-      "caption": "",
-      "labels": [
-        "User"
-      ],
-      "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n4",
-      "position": {
-        "x": 102.11187188007716,
-        "y": -650.4118545416429
+        "x": 1000.1339230213935,
+        "y": 354.460201736018
       },
       "caption": "",
       "labels": [
@@ -116,10 +110,10 @@
       "style": {}
     },
     {
-      "id": "n5",
+      "id": "n4",
       "position": {
-        "x": -24.35607614816081,
-        "y": -841.5345065660874
+        "x": 873.6659749931555,
+        "y": 163.3375497115735
       },
       "caption": "",
       "labels": [
@@ -129,10 +123,10 @@
       "style": {}
     },
     {
-      "id": "n6",
+      "id": "n5",
       "position": {
-        "x": -823.0220511413163,
-        "y": -811.8720562776609
+        "x": 75,
+        "y": 193
       },
       "caption": "",
       "labels": [
@@ -143,10 +137,10 @@
       "style": {}
     },
     {
-      "id": "n7",
+      "id": "n6",
       "position": {
-        "x": -823.0220511413163,
-        "y": -650.4118545416429
+        "x": 75,
+        "y": 354.460201736018
       },
       "caption": "",
       "labels": [
@@ -157,10 +151,10 @@
       "style": {}
     },
     {
-      "id": "n8",
+      "id": "n7",
       "position": {
-        "x": -823.0220511413163,
-        "y": -477
+        "x": 75,
+        "y": 527.8720562776609
       },
       "caption": "",
       "labels": [
@@ -171,10 +165,10 @@
       "style": {}
     },
     {
-      "id": "n9",
+      "id": "n8",
       "position": {
-        "x": 126.84017019612651,
-        "y": -398.07181012971625
+        "x": 1024.8622213374429,
+        "y": 606.8002461479447
       },
       "caption": "",
       "labels": [
@@ -184,10 +178,10 @@
       "style": {}
     },
     {
-      "id": "n10",
+      "id": "n9",
       "position": {
-        "x": -218.12943497511014,
-        "y": -954.8720562776609
+        "x": 679.8926161662062,
+        "y": 50
       },
       "caption": "",
       "labels": [
@@ -205,10 +199,10 @@
       }
     },
     {
-      "id": "n11",
+      "id": "n10",
       "position": {
-        "x": -823.0220511413163,
-        "y": -84.07181012971625
+        "x": 75,
+        "y": 920.8002461479447
       },
       "caption": "",
       "labels": [
@@ -226,10 +220,10 @@
       }
     },
     {
-      "id": "n12",
+      "id": "n11",
       "position": {
-        "x": -435.59094047259487,
-        "y": -811.8720562776609
+        "x": 462.43111066872143,
+        "y": 193
       },
       "caption": "",
       "labels": [
@@ -250,22 +244,17 @@
     },
     {
       "id": "n1",
-      "type": "PARTICIPATES_IN [multiple]",
-      "style": {
-        "property-position": "outside",
-        "property-color": "#68bc00"
-      },
-      "properties": {
-        "points": "Int!"
-      },
       "fromId": "n2",
-      "toId": "n0"
+      "toId": "n0",
+      "type": "OWNS [single]",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n2",
       "fromId": "n3",
       "toId": "n0",
-      "type": "OWNS [single]",
+      "type": "FOR [multiple]",
       "properties": {},
       "style": {}
     },
@@ -279,9 +268,9 @@
     },
     {
       "id": "n4",
-      "fromId": "n5",
-      "toId": "n0",
-      "type": "FOR [multiple]",
+      "fromId": "n0",
+      "toId": "n8",
+      "type": "IS_PARENT_OF [multiple]",
       "properties": {},
       "style": {}
     },
@@ -289,30 +278,22 @@
       "id": "n5",
       "fromId": "n0",
       "toId": "n9",
-      "type": "IS_PARENT_OF [multiple]",
-      "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n6",
-      "fromId": "n0",
-      "toId": "n10",
       "type": "HAS_SETTINGS [single]",
       "properties": {},
       "style": {}
     },
     {
-      "id": "n7",
-      "fromId": "n8",
-      "toId": "n11",
+      "id": "n6",
+      "fromId": "n7",
+      "toId": "n10",
       "type": "HAS_INFO [single]",
       "properties": {},
       "style": {}
     },
     {
-      "id": "n8",
-      "fromId": "n6",
-      "toId": "n12",
+      "id": "n7",
+      "fromId": "n5",
+      "toId": "n11",
       "type": "HAS_INFO  [single]",
       "properties": {},
       "style": {}

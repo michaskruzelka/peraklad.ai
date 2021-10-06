@@ -5,13 +5,18 @@
     "border-color": "#000000",
     "radius": 75,
     "node-padding": 5,
+    "node-margin": 2,
     "outside-position": "auto",
+    "node-icon-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
     "caption-position": "inside",
     "caption-max-width": 200,
     "caption-color": "#ffffff",
     "caption-font-size": 20,
     "caption-font-weight": "normal",
     "label-position": "inside",
+    "label-display": "pill",
     "label-color": "#000000",
     "label-background-color": "#ffffff",
     "label-border-color": "#848484",
@@ -29,6 +34,7 @@
     "margin-peer": 20,
     "attachment-start": "normal",
     "attachment-end": "normal",
+    "relationship-icon-image": "",
     "type-color": "#848484",
     "type-background-color": "#ffffff",
     "type-border-color": "#848484",
@@ -36,6 +42,7 @@
     "type-font-size": 21,
     "type-padding": 5,
     "property-position": "outside",
+    "property-alignment": "colon",
     "property-color": "#848484",
     "property-font-size": 20,
     "property-font-weight": "normal"
@@ -44,8 +51,8 @@
     {
       "id": "n0",
       "position": {
-        "x": 0,
-        "y": -89
+        "x": 475.8515472014951,
+        "y": 480
       },
       "caption": "",
       "labels": [
@@ -68,8 +75,8 @@
     {
       "id": "n1",
       "position": {
-        "x": 0,
-        "y": -519
+        "x": 475.8515472014951,
+        "y": 50
       },
       "caption": "",
       "labels": [
@@ -81,8 +88,8 @@
     {
       "id": "n2",
       "position": {
-        "x": -372.32675186959614,
-        "y": -304.11111045744747
+        "x": 103.52479533189899,
+        "y": 264.88888954255253
       },
       "caption": "",
       "labels": [
@@ -94,8 +101,8 @@
     {
       "id": "n3",
       "position": {
-        "x": 338.2442505817302,
-        "y": -304.11111045744747
+        "x": 814.0957977832254,
+        "y": 264.88888954255253
       },
       "caption": "",
       "labels": [
@@ -107,8 +114,8 @@
     {
       "id": "n4",
       "position": {
-        "x": -215.62192339070964,
-        "y": -461.03116287925525
+        "x": 260.2296238107855,
+        "y": 107.96883712074475
       },
       "caption": "",
       "labels": [
@@ -120,8 +127,8 @@
     {
       "id": "n5",
       "position": {
-        "x": 215.6219233907097,
-        "y": -461.03116287925525
+        "x": 691.4734705922049,
+        "y": 107.96883712074475
       },
       "caption": "",
       "labels": [
@@ -133,8 +140,8 @@
     {
       "id": "n6",
       "position": {
-        "x": -400.8515472014951,
-        "y": -89
+        "x": 75,
+        "y": 480
       },
       "caption": "",
       "labels": [
@@ -146,8 +153,8 @@
     {
       "id": "n7",
       "position": {
-        "x": -334.6484987491289,
-        "y": 131.6634205725697
+        "x": 141.2030484523662,
+        "y": 700.6634205725697
       },
       "caption": "",
       "labels": [
@@ -159,8 +166,21 @@
     {
       "id": "n8",
       "position": {
-        "x": 430,
-        "y": -89
+        "x": 905.8515472014951,
+        "y": 480
+      },
+      "caption": "",
+      "labels": [
+        "User"
+      ],
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 814.0957977832254,
+        "y": 695.1111104574475
       },
       "caption": "",
       "style": {},
@@ -241,15 +261,27 @@
     },
     {
       "id": "n7",
+      "fromId": "n0",
+      "toId": "n8",
       "type": "RESUMED",
+      "properties": {
+        "at": "DateTime!"
+      },
+      "style": {
+        "property-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n8",
+      "type": "PARTICIPATES_IN",
       "style": {
         "property-color": "#68bc00"
       },
       "properties": {
-        "at": "DateTime!"
+        "points": "Int!"
       },
-      "fromId": "n0",
-      "toId": "n8"
+      "fromId": "n9",
+      "toId": "n0"
     }
   ]
 }

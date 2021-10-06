@@ -1,6 +1,6 @@
 ![peraklad.ai cover](https://github.com/michaskruzelka/peraklad.ai/blob/master/cover.png)
 
-# Перакладай - peraklad.ai (_in development_)
+# Перакладай (_in development_)
 
 **Based on GRANDstack**:
 
@@ -8,7 +8,7 @@
 
 Collaborative Belarusian-language translations service
 
-Калектыўны пераклад субтытраў і інтэрфейсаў для гульняў, сайтаў, дадаткаў, ПЗ.
+Калектыўны пераклад субтытраў. Лакалізацыя гульняў, сайтаў, мабільных дадаткаў, праграмнага забяспечання.
 
 ## Local set up
 

@@ -5,13 +5,18 @@
     "border-color": "#000000",
     "radius": 75,
     "node-padding": 5,
+    "node-margin": 2,
     "outside-position": "auto",
+    "node-icon-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
     "caption-position": "inside",
     "caption-max-width": 200,
     "caption-color": "#ffffff",
     "caption-font-size": 20,
     "caption-font-weight": "normal",
     "label-position": "inside",
+    "label-display": "pill",
     "label-color": "#000000",
     "label-background-color": "#ffffff",
     "label-border-color": "#848484",
@@ -29,6 +34,7 @@
     "margin-peer": 20,
     "attachment-start": "normal",
     "attachment-end": "normal",
+    "relationship-icon-image": "",
     "type-color": "#848484",
     "type-background-color": "#ffffff",
     "type-border-color": "#848484",
@@ -36,6 +42,7 @@
     "type-font-size": 21,
     "type-padding": 5,
     "property-position": "outside",
+    "property-alignment": "colon",
     "property-color": "#848484",
     "property-font-size": 20,
     "property-font-weight": "normal"
@@ -44,8 +51,8 @@
     {
       "id": "n0",
       "position": {
-        "x": 113.68782641326032,
-        "y": -9
+        "x": 461.7613908365649,
+        "y": 479.9136293823484
       },
       "caption": "",
       "labels": [
@@ -61,8 +68,8 @@
     {
       "id": "n1",
       "position": {
-        "x": 451.36541711376145,
-        "y": -268.91362938234846
+        "x": 799.438981537066,
+        "y": 219.99999999999994
       },
       "caption": "",
       "labels": [
@@ -74,8 +81,8 @@
     {
       "id": "n2",
       "position": {
-        "x": -223.9897642872408,
-        "y": -268.91362938234846
+        "x": 124.08380013606376,
+        "y": 219.99999999999994
       },
       "caption": "",
       "labels": [
@@ -87,38 +94,12 @@
     {
       "id": "n3",
       "position": {
-        "x": 113.68782641326032,
-        "y": -438.9136293823484
+        "x": 461.7613908365649,
+        "y": 50
       },
       "caption": "",
       "labels": [
         "ResourceItem"
-      ],
-      "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n4",
-      "position": {
-        "x": -273.07356442330456,
-        "y": 169.8767077016061
-      },
-      "caption": "",
-      "labels": [
-        "ResourceItem"
-      ],
-      "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n5",
-      "position": {
-        "x": 252.66830458730138,
-        "y": 393.82214026355956
-      },
-      "caption": "",
-      "labels": [
-        "Recommendation"
       ],
       "properties": {},
       "style": {}
@@ -126,8 +107,8 @@
     {
       "id": "n6",
       "position": {
-        "x": -25.292651760780785,
-        "y": 393.82214026355956
+        "x": 63.760960197140435,
+        "y": 632.1532668321028
       },
       "caption": "",
       "labels": [
@@ -139,8 +120,8 @@
     {
       "id": "n7",
       "position": {
-        "x": 539.8113413710715,
-        "y": -9
+        "x": 887.8849057943761,
+        "y": 479.9136293823484
       },
       "caption": "",
       "labels": [
@@ -152,8 +133,8 @@
     {
       "id": "n8",
       "position": {
-        "x": 451.36541711376145,
-        "y": 250.9136293823484
+        "x": 461.7613908365649,
+        "y": 906.0371443401596
       },
       "caption": "",
       "labels": [
@@ -164,22 +145,23 @@
         "text": "String!"
       },
       "style": {
-        "property-position": "inside",
-        "property-color": "#ffffff"
+        "property-position": "outside",
+        "property-color": "#808080",
+        "property-alignment": "colon"
       }
     },
     {
       "id": "n9",
       "position": {
-        "x": 763.8688884738835,
-        "y": 250.9136293823484
+        "x": 799.438981537066,
+        "y": 736.1532668321028
       },
       "caption": "",
-      "style": {},
       "labels": [
         "User"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     }
   ],
   "relationships": [
@@ -204,27 +186,6 @@
       "fromId": "n2",
       "toId": "n3",
       "type": "LAST_ITEM [single]",
-      "properties": {},
-      "style": {}
-    },
-    {
-      "id": "n3",
-      "fromId": "n0",
-      "toId": "n4",
-      "type": "SIMILAR_TO [multiple]",
-      "properties": {
-        "match": "Float!"
-      },
-      "style": {
-        "detail-position": "above",
-        "property-color": "#68bc00"
-      }
-    },
-    {
-      "id": "n4",
-      "fromId": "n5",
-      "toId": "n0",
-      "type": "FOR [single]",
       "properties": {},
       "style": {}
     },
@@ -254,15 +215,15 @@
     },
     {
       "id": "n8",
+      "fromId": "n9",
+      "toId": "n8",
       "type": "ADDED",
-      "style": {
-        "property-color": "#68bc00"
-      },
       "properties": {
         "at": "DateTime!"
       },
-      "fromId": "n9",
-      "toId": "n8"
+      "style": {
+        "property-color": "#68bc00"
+      }
     }
   ]
 }
