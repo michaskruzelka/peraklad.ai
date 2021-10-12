@@ -40,6 +40,7 @@ services:
             - GOOGLE_OAUTH2_CLIENT_SECRET=${GOOGLE_OAUTH2_CLIENT_SECRET}
             - FACEBOOK_APP_ID=${FACEBOOK_APP_ID}
             - FACEBOOK_APP_SECRET=${FACEBOOK_APP_SECRET}
+            - SMS_VERIFICATION_ENABLED=${SMS_VERIFICATION_ENABLED}
         depends_on:
             - db
 
