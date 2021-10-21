@@ -51,8 +51,8 @@
     {
       "id": "n0",
       "position": {
-        "x": 75,
-        "y": 479.5
+        "x": 112.5,
+        "y": 504.5
       },
       "caption": "",
       "labels": [
@@ -65,7 +65,6 @@
         "avatarSrc": "String",
         "link": "String",
         "roles": "[String!]!",
-        "seenNotificationsAt": "DateTime",
         "phone": "String!"
       },
       "style": {}
@@ -73,8 +72,8 @@
     {
       "id": "n1",
       "position": {
-        "x": 504.5,
-        "y": 479.5
+        "x": 542,
+        "y": 504.5
       },
       "caption": "",
       "labels": [
@@ -86,8 +85,8 @@
     {
       "id": "n2",
       "position": {
-        "x": 504.5,
-        "y": 50
+        "x": 542,
+        "y": 75
       },
       "caption": "",
       "labels": [
@@ -100,8 +99,8 @@
     {
       "id": "n3",
       "position": {
-        "x": 809.7303306218407,
-        "y": 177.33333196978555
+        "x": 847.2303306218407,
+        "y": 202.33333196978555
       },
       "caption": "",
       "labels": [
@@ -116,8 +115,8 @@
     {
       "id": "n4",
       "position": {
-        "x": 934,
-        "y": 479.5
+        "x": 971.5,
+        "y": 504.5
       },
       "caption": "",
       "labels": [

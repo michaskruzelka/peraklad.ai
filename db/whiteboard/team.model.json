@@ -51,8 +51,8 @@
     {
       "id": "n0",
       "position": {
-        "x": 443.62514835534483,
-        "y": 328.5
+        "x": 481.12514835534483,
+        "y": 353.5
       },
       "caption": "",
       "labels": [
@@ -72,8 +72,8 @@
     {
       "id": "n1",
       "position": {
-        "x": 685.1251483553449,
-        "y": 50
+        "x": 722.6251483553449,
+        "y": 75
       },
       "caption": "",
       "labels": [
@@ -83,10 +83,10 @@
       "style": {}
     },
     {
-      "id": "n3",
+      "id": "n2",
       "position": {
-        "x": 625.574525927793,
-        "y": 649.091522035438
+        "x": 956.074525927793,
+        "y": 353.49999999999994
       },
       "caption": "",
       "labels": [
@@ -96,10 +96,10 @@
       "style": {}
     },
     {
-      "id": "n5",
+      "id": "n3",
       "position": {
-        "x": 75,
-        "y": 328.5
+        "x": 77.5,
+        "y": 353.5
       },
       "caption": "",
       "labels": [
@@ -123,20 +123,20 @@
       }
     },
     {
-      "id": "n2",
-      "fromId": "n3",
-      "toId": "n0",
-      "type": "TO [multiple]",
+      "id": "n1",
+      "type": "ASSIGNMENT_TO [multiple]",
+      "style": {},
       "properties": {},
-      "style": {}
+      "fromId": "n2",
+      "toId": "n0"
     },
     {
-      "id": "n4",
-      "fromId": "n5",
-      "toId": "n0",
-      "type": "FOR [multiple]",
+      "id": "n2",
+      "type": "TI_FOR [multiple]",
+      "style": {},
       "properties": {},
-      "style": {}
+      "fromId": "n3",
+      "toId": "n0"
     }
   ]
 }

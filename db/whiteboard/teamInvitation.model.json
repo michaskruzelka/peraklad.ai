@@ -5,13 +5,18 @@
     "border-color": "#000000",
     "radius": 75,
     "node-padding": 5,
+    "node-margin": 2,
     "outside-position": "auto",
+    "node-icon-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
     "caption-position": "inside",
     "caption-max-width": 200,
     "caption-color": "#ffffff",
     "caption-font-size": 20,
     "caption-font-weight": "normal",
     "label-position": "inside",
+    "label-display": "pill",
     "label-color": "#000000",
     "label-background-color": "#ffffff",
     "label-border-color": "#848484",
@@ -29,6 +34,7 @@
     "margin-peer": 20,
     "attachment-start": "normal",
     "attachment-end": "normal",
+    "relationship-icon-image": "",
     "type-color": "#848484",
     "type-background-color": "#ffffff",
     "type-border-color": "#848484",
@@ -36,6 +42,7 @@
     "type-font-size": 21,
     "type-padding": 5,
     "property-position": "outside",
+    "property-alignment": "colon",
     "property-color": "#848484",
     "property-font-size": 20,
     "property-font-weight": "normal"
@@ -44,60 +51,60 @@
     {
       "id": "n0",
       "position": {
-        "x": 16,
-        "y": -162
+        "x": 112.5,
+        "y": 467.5
       },
       "caption": "",
-      "style": {},
       "labels": [
         "TeamInvitation"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n1",
       "position": {
-        "x": 635.5,
-        "y": -162
+        "x": 732,
+        "y": 467.5
       },
       "caption": "",
-      "style": {},
       "labels": [
         "User"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n2",
       "position": {
-        "x": 16,
-        "y": -554.5
+        "x": 112.5,
+        "y": 75
       },
       "caption": "",
-      "style": {},
       "labels": [
         "Team"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n3",
       "position": {
-        "x": 635.5,
-        "y": -554.5
+        "x": 732,
+        "y": 75
       },
       "caption": "",
-      "style": {},
       "labels": [
         "User"
       ],
-      "properties": {}
+      "properties": {},
+      "style": {}
     }
   ],
   "relationships": [
     {
       "id": "n0",
-      "type": "TO",
+      "type": "TI_TO",
       "style": {},
       "properties": {},
       "fromId": "n0",
@@ -105,20 +112,20 @@
     },
     {
       "id": "n1",
+      "fromId": "n1",
+      "toId": "n0",
       "type": "REQUESTED or RESPONDED",
-      "style": {
-        "detail-position": "below",
-        "property-color": "#68bc00"
-      },
       "properties": {
         "at": "DateTime!"
       },
-      "fromId": "n1",
-      "toId": "n0"
+      "style": {
+        "detail-position": "below",
+        "property-color": "#68bc00"
+      }
     },
     {
       "id": "n2",
-      "type": "FOR",
+      "type": "TI_FOR",
       "style": {},
       "properties": {},
       "fromId": "n0",
@@ -126,23 +133,23 @@
     },
     {
       "id": "n3",
-      "type": "CREATED",
-      "style": {},
-      "properties": {},
       "fromId": "n3",
-      "toId": "n2"
+      "toId": "n2",
+      "type": "CREATED",
+      "properties": {},
+      "style": {}
     },
     {
       "id": "n4",
+      "fromId": "n3",
+      "toId": "n0",
       "type": "REQUESTED or RESPONDED",
-      "style": {
-        "property-color": "#68bc00"
-      },
       "properties": {
         "at": "DateTime!"
       },
-      "fromId": "n3",
-      "toId": "n0"
+      "style": {
+        "property-color": "#68bc00"
+      }
     }
   ]
 }
