@@ -1,6 +1,6 @@
 ![peraklad.ai cover](https://github.com/michaskruzelka/peraklad.ai/blob/master/cover.png)
 
-# Перакладай (_in development_)
+# Перакладай
 
 **Based on GRANDstack**:
 
@@ -8,12 +8,12 @@
 
 Collaborative Belarusian-language translations service
 
-Калектыўны пераклад субтытраў. Лакалізацыя гульняў, сайтаў, мабільных дадаткаў, праграмнага забяспечання.
+Калектыўны пераклад субтытраў. Лакалізацыя гульняў, сайтаў, мабільных дадаткаў, праграмнага забеспячэння.
 
 ## Local set up
 
 -   clone recursively <br/>
-    <span style="color:red;"><sup>(All of submodules are private. Please contact the repository owner before cloning).</sup></span>
+    <span style="color:red;"><sup>(Some of submodules are private. Please contact the repository owner before cloning).</sup></span>
 -   create an .env file and fill it with variables from .env.sample.
 -   run containers:
 

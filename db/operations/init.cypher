@@ -6,5 +6,7 @@ CALL apoc.uuid.install('Comment', { addToExistingNodes: false, uuidProperty: "id
 CALL apoc.uuid.install('Team', { addToExistingNodes: false, uuidProperty: "id" });
 CALL apoc.uuid.install('ProjectInvitation', { addToExistingNodes: false, uuidProperty: "id" });
 CALL apoc.uuid.install('TeamInvitation', { addToExistingNodes: false, uuidProperty: "id" });
-CALL apoc.schema.assert({ Notification: ['code'], Resource: ['status'], ResourceItem: ['status'], Project: ['createdAt'], ProjectSettings: ['access'] }, { Project: ['id'], Resource: ['id'], ResourceItem: ['id'], Translation: ['id'], Comment: ['id'], User: ['username', 'email', 'phone'], Team: ['id'], ProjectInvitation: ['id'], TeamInvitation: ['id'] }, false);
+CALL apoc.uuid.install('Assignment', { addToExistingNodes: false, uuidProperty: "id" });
+CALL apoc.uuid.install('Notification', { addToExistingNodes: false, uuidProperty: "id" });
+CALL apoc.schema.assert({ Notification: ['code'], Resource: ['status'], ResourceItem: ['status'], Project: ['createdAt'], ProjectSettings: ['access'] }, { Project: ['id'], Resource: ['id'], ResourceItem: ['id'], Translation: ['id'], Comment: ['id'], User: ['username', 'email', 'phone'], Team: ['id'], ProjectInvitation: ['id'], TeamInvitation: ['id'], Assignment: ['id'], Notification: ['id'] }, false);
 MERGE (:Bot { id: 'peraklad-ai' });
