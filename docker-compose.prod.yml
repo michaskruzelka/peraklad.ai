@@ -59,5 +59,6 @@ services:
             - REACT_APP_API_URL=${REACT_APP_API_URL}
             - REACT_APP_MAIN_URL=${REACT_APP_MAIN_URL}
             - REACT_APP_MAINTENANCE_MODE=${REACT_APP_MAINTENANCE_MODE}
+            - REACT_APP_INACTIVE_MODE=${REACT_APP_INACTIVE_MODE}
         depends_on:
             - api
